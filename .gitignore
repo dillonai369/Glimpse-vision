@@ -1,0 +1,11 @@
+# macOS junk
+.DS_Store
+**/.DS_Store
+
+# Editor cruft
+.vscode/
+.idea/
+*.swp
+
+# Local backups
+**/originals/

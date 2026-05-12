@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glimpse Vision — Designer Eyewear &amp; Integrative Eye Care | Chicago &amp; Hinsdale</title>
+<meta name="description" content="A curated boutique of independent designer eyewear — Lindberg, Tom Ford, Dita, Barton Perreira, Anne &amp; Valentin, and more — paired with integrative optometry. Two locations in Chicago Gold Coast and Hinsdale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+<!-- Motion libs (native scroll, GSAP for pinned showcase only) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="css/motion.js" defer></script>
+</head>
+<body>
+
+<!-- ======= HEADER (full-bleed, three-column) ======= -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="Glimpse Vision"></a>
+    <nav>
+      <ul class="nav-primary">
+        <li class="has-dropdown"><a href="services/index.html">Services</a>
+          <ul class="nav-dropdown">
+            <li class="has-submenu"><a href="services/integrative-eye-exams.html">Integrative Eye Exams</a>
+              <ul class="nav-submenu">
+                <li><a href="services/comprehensive-eye-exams.html">Comprehensive Eye Exams</a></li>
+                <li><a href="services/pediatric-eye-exams.html">Pediatric Eye Exams</a></li>
+                <li><a href="services/dry-eye-evaluations.html">Dry Eye Evaluations</a></li>
+              </ul></li>
+            <li class="has-submenu"><a href="services/wellness.html">Wellness</a>
+              <ul class="nav-submenu">
+                <li><a href="services/nutrition-support.html">Nutrition Support</a></li>
+                <li><a href="services/dry-eye-specialty-products.html">Dry Eye &amp; Specialty Products</a></li>
+                <li><a href="services/specialty-products.html">Specialty Products</a></li>
+                <li><a href="services/blue-light-protection.html">Blue Light Protection</a></li>
+              </ul></li>
+            <li class="has-submenu"><a href="services/contact-lenses.html">Contact Lenses</a>
+              <ul class="nav-submenu">
+                <li><a href="services/fittings-training.html">Fittings &amp; Training</a></li>
+                <li><a href="services/lens-care.html">Lens Care</a></li>
+                <li><a href="services/myopia-control.html">Myopia Control</a></li>
+              </ul></li>
+            <li><a href="services/red-light-therapy.html">Red Light Therapy</a></li>
+          </ul></li>
+        <li class="has-dropdown"><a href="eyewear/index.html">Eyewear Collections</a>
+          <ul class="nav-dropdown">
+            <li class="has-submenu"><a href="eyewear/independent-designer-eyewear.html">Independent Designer Eyewear</a>
+              <ul class="nav-submenu">
+                <li><a href="eyewear/lindberg.html">Lindberg</a></li>
+                <li><a href="eyewear/tom-ford.html">Tom Ford</a></li>
+                <li><a href="eyewear/dita.html">Dita</a></li>
+                <li><a href="eyewear/barton-perreira.html">Barton Perreira</a></li>
+                <li><a href="eyewear/anne-valentin.html">Anne &amp; Valentin</a></li>
+                <li><a href="eyewear/thierry-lasry.html">Thierry Lasry</a></li>
+                <li><a href="eyewear/la-eyeworks.html">l.a. Eyeworks</a></li>
+                <li><a href="eyewear/oliver-goldsmith.html">Oliver Goldsmith</a></li>
+                <li><a href="eyewear/lafont.html">Lafont</a></li>
+                <li><a href="eyewear/theo.html">Theo</a></li>
+                <li><a href="eyewear/sospiri.html">Sospiri</a></li>
+                <li><a href="eyewear/orgreen.html">Orgreen</a></li>
+                <li><a href="eyewear/fhone.html">FHone</a></li>
+              </ul></li>
+            <li><a href="eyewear/contact-lens-selection.html">Contact Lens Selection</a></li>
+            <li class="has-submenu"><a href="eyewear/lens-treatments.html">Lens Treatments</a>
+              <ul class="nav-submenu">
+                <li><a href="eyewear/prescription-lens-options.html">Prescription Lens Options</a></li>
+                <li><a href="eyewear/stellest.html">Stellest</a></li>
+                <li><a href="eyewear/enchroma.html">Enchroma</a></li>
+                <li><a href="eyewear/avulux.html">Avulux</a></li>
+                <li><a href="eyewear/neurolens.html">Neurolens</a></li>
+                <li><a href="eyewear/blue-light-protection.html">Blue Light Protection</a></li>
+              </ul></li>
+          </ul></li>
+        <li class="has-dropdown"><a href="experts/index.html">Our Team</a>
+          <ul class="nav-dropdown">
+            <li><a href="experts/dr-carrie.html">Dr. Carrie</a></li>
+            <li><a href="experts/dory.html">Dory</a></li>
+            <li><a href="experts/dr-john.html">Dr. John</a></li>
+            <li><a href="experts/boyce.html">Boyce</a></li>
+            <li><a href="experts/dayana.html">Dayana</a></li>
+            <li><a href="experts/dr-janette.html">Dr. Janette</a></li>
+            <li><a href="experts/lesley.html">Lesley</a></li>
+            <li><a href="experts/patty.html">Patty</a></li>
+          </ul></li>
+        <li class="has-dropdown"><a href="locations/index.html">Locations</a>
+          <ul class="nav-dropdown">
+            <li><a href="locations/hinsdale.html">Hinsdale</a></li>
+            <li><a href="locations/gold-coast.html">Gold Coast</a></li>
+          </ul></li>
+        <li class="has-dropdown"><a href="buzz/index.html">News</a>
+          <ul class="nav-dropdown">
+            <li><a href="buzz/blog.html">Blog</a></li>
+            <li><a href="buzz/happenings.html">Happenings</a></li>
+            <li><a href="buzz/reviews.html">Reviews</a></li>
+          </ul></li>
+        </ul>
+    </nav>
+    <div class="header-cta">
+      <a href="schedule.html" class="btn btn-primary">Schedule Now</a>
+      <a href="order.html" class="btn btn-outline">Order</a>
+      <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('mob').classList.toggle('open')"><span></span></button>
+    </div>
+  </div>
+  <div id="mob" class="mobile-nav">
+
+    <details class="m-acc">
+      <summary>Services</summary>
+      <div class="m-acc-body">
+        <a class="m-link" href="services/index.html">All Services</a>
+        <details class="m-acc m-sub">
+          <summary>Integrative Eye Exams</summary>
+          <div class="m-acc-body">
+            <a class="m-link" href="services/integrative-eye-exams.html">All Integrative Eye Exams</a>
+            <a class="m-link" href="services/comprehensive-eye-exams.html">Comprehensive Eye Exams</a>
+            <a class="m-link" href="services/pediatric-eye-exams.html">Pediatric Eye Exams</a>
+            <a class="m-link" href="services/dry-eye-evaluations.html">Dry Eye Evaluations</a>
+          </div>
+        </details>
+        <details class="m-acc m-sub">
+          <summary>Wellness</summary>
+          <div class="m-acc-body">
+            <a class="m-link" href="services/wellness.html">All Wellness</a>
+            <a class="m-link" href="services/nutrition-support.html">Nutrition Support</a>
+            <a class="m-link" href="services/dry-eye-specialty-products.html">Dry Eye &amp; Specialty Products</a>
+            <a class="m-link" href="services/specialty-products.html">Specialty Products</a>
+            <a class="m-link" href="services/blue-light-protection.html">Blue Light Protection</a>
+          </div>
+        </details>
+        <details class="m-acc m-sub">
+          <summary>Contact Lenses</summary>
+          <div class="m-acc-body">
+            <a class="m-link" href="services/contact-lenses.html">All Contact Lenses</a>
+            <a class="m-link" href="services/fittings-training.html">Fittings &amp; Training</a>
+            <a class="m-link" href="services/lens-care.html">Lens Care</a>
+            <a class="m-link" href="services/myopia-control.html">Myopia Control</a>
+          </div>
+        </details>
+        <a class="m-link" href="services/red-light-therapy.html">Red Light Therapy</a>
+      </div>
+    </details>
+
+    <details class="m-acc">
+      <summary>Eyewear Collections</summary>
+      <div class="m-acc-body">
+        <a class="m-link" href="eyewear/index.html">All Eyewear</a>
+        <details class="m-acc m-sub">
+          <summary>Independent Designer Eyewear</summary>
+          <div class="m-acc-body">
+            <a class="m-link" href="eyewear/independent-designer-eyewear.html">View All 14 Brands</a>
+            <a class="m-link" href="eyewear/lindberg.html">Lindberg</a>
+            <a class="m-link" href="eyewear/tom-ford.html">Tom Ford</a>
+            <a class="m-link" href="eyewear/dita.html">Dita</a>
+            <a class="m-link" href="eyewear/barton-perreira.html">Barton Perreira</a>
+            <a class="m-link" href="eyewear/anne-valentin.html">Anne &amp; Valentin</a>
+            <a class="m-link" href="eyewear/thierry-lasry.html">Thierry Lasry</a>
+            <a class="m-link" href="eyewear/la-eyeworks.html">l.a. Eyeworks</a>
+            <a class="m-link" href="eyewear/oliver-goldsmith.html">Oliver Goldsmith</a>
+            <a class="m-link" href="eyewear/lafont.html">Lafont</a>
+            <a class="m-link" href="eyewear/theo.html">Theo</a>
+            <a class="m-link" href="eyewear/sospiri.html">Sospiri</a>
+            <a class="m-link" href="eyewear/orgreen.html">Orgreen</a>
+            <a class="m-link" href="eyewear/fhone.html">FHone</a>
+          </div>
+        </details>
+        <a class="m-link" href="eyewear/contact-lens-selection.html">Contact Lens Selection</a>
+        <details class="m-acc m-sub">
+          <summary>Lens Treatments</summary>
+          <div class="m-acc-body">
+            <a class="m-link" href="eyewear/lens-treatments.html">All Lens Treatments</a>
+            <a class="m-link" href="eyewear/prescription-lens-options.html">Prescription Lens Options</a>
+            <a class="m-link" href="eyewear/stellest.html">Stellest</a>
+            <a class="m-link" href="eyewear/enchroma.html">Enchroma</a>
+            <a class="m-link" href="eyewear/avulux.html">Avulux</a>
+            <a class="m-link" href="eyewear/neurolens.html">Neurolens</a>
+            <a class="m-link" href="eyewear/blue-light-protection.html">Blue Light Protection</a>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <details class="m-acc">
+      <summary>Our Team</summary>
+      <div class="m-acc-body">
+        <a class="m-link" href="experts/index.html">Meet the Team</a>
+        <a class="m-link" href="experts/dr-carrie.html">Dr. Carrie</a>
+        <a class="m-link" href="experts/dory.html">Dory</a>
+        <a class="m-link" href="experts/dr-john.html">Dr. John</a>
+        <a class="m-link" href="experts/boyce.html">Boyce</a>
+        <a class="m-link" href="experts/dayana.html">Dayana</a>
+        <a class="m-link" href="experts/dr-janette.html">Dr. Janette</a>
+        <a class="m-link" href="experts/lesley.html">Lesley</a>
+        <a class="m-link" href="experts/patty.html">Patty</a>
+      </div>
+    </details>
+
+    <details class="m-acc">
+      <summary>Locations</summary>
+      <div class="m-acc-body">
+        <a class="m-link" href="locations/index.html">All Locations</a>
+        <a class="m-link" href="locations/hinsdale.html">Hinsdale</a>
+        <a class="m-link" href="locations/gold-coast.html">Gold Coast</a>
+      </div>
+    </details>
+
+    <details class="m-acc">
+      <summary>News</summary>
+      <div class="m-acc-body">
+        <a class="m-link" href="buzz/index.html">All News</a>
+        <a class="m-link" href="buzz/blog.html">Blog</a>
+        <a class="m-link" href="buzz/happenings.html">Happenings</a>
+        <a class="m-link" href="buzz/reviews.html">Reviews</a>
+      </div>
+    </details>
+
+    <a class="m-link m-direct" href="contact.html">Contact Us</a>
+    <a class="m-link m-direct" href="order.html">Order</a>
+    <a class="m-link m-cta" href="schedule.html">Schedule Now &rarr;</a>
+
+  </div>
+</header>
+
+<!-- ======= HERO ======= -->
+<section class="hero" aria-label="Welcome">
+
+  <!-- Hero background video -->
+  <div class="hero-media">
+    <video autoplay muted loop playsinline preload="auto" poster="images/hero/hero-poster.jpg">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Mouse-follow glow -->
+  <div class="hero-glow" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <h1 data-split>Eyewear for<br>people who notice<br><em>everything.</em></h1>
+    <p class="lead reveal">A curated collection of designer eyewear from Copenhagen, Tokyo, Paris, and Los Angeles &mdash; paired with a refined optical experience and advanced eye care in Chicago&rsquo;s Gold Coast and Hinsdale.</p>
+    <div class="hero-ctas reveal">
+      <a class="btn btn-primary magnetic" href="eyewear/index.html">Shop the Collections</a>
+      <a class="btn btn-ghost magnetic" href="schedule.html">Book an Eye Exam</a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <span style="font-weight: 400; letter-spacing: 0.06em; color: var(--bg);">Take a <em style="font-style: normal; font-weight: 800;">Glimpse</em>.</span>
+    <span class="scroll-cue">Scroll</span>
+  </div>
+</section>
+
+<!-- ======= BIG STATS ======= -->
+<section style="padding: 0;">
+  <!-- Desktop / tablet: stat grid with count-up animation -->
+  <div class="big-stats">
+    <div class="big-stat" data-anim="rise">
+      <span class="num">14</span>
+      <span class="label">Independent Designers</span>
+    </div>
+    <div class="big-stat" data-anim="rise">
+      <span class="num"><em>30</em></span>
+      <span class="label">Years Clinical Experience</span>
+    </div>
+    <div class="big-stat" data-anim="rise">
+      <span class="num">8</span>
+      <span class="label">Eyewear Specialists</span>
+    </div>
+    <div class="big-stat" data-anim="rise">
+      <span class="num">2</span>
+      <span class="label">Chicago Locations</span>
+    </div>
+  </div>
+
+  <!-- Mobile: scrolling banner version -->
+  <div class="big-stats-marquee" aria-hidden="true">
+    <div class="marquee-track bold">
+      <span>14 Independent Designers</span>
+      <span>30 Years Clinical Experience</span>
+      <span>8 Eyewear Specialists</span>
+      <span>2 Chicago Locations</span>
+      <!-- duplicate for seamless loop -->
+      <span>14 Independent Designers</span>
+      <span>30 Years Clinical Experience</span>
+      <span>8 Eyewear Specialists</span>
+      <span>2 Chicago Locations</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= INTEGRATIVE EYE CARE EDITORIAL ======= -->
+<section class="bg-card" style="border-top: 1px solid var(--line);">
+  <div class="container">
+    <div class="split">
+      <div class="split-image" data-tone="warm" data-anim="rise" style="aspect-ratio: 3/4; background-image: url('images/hero/integrative.png'); background-size: cover; background-position: center top; border: 0; border-radius: 20px;"></div>
+      <div>
+        <span class="eyebrow reveal">The Integrative Difference</span>
+        <h2 class="reveal">Eye care that looks at the whole&nbsp;person.</h2>
+        <p class="lead reveal">Led by Dr. Carrie Roitstein &mdash; thirty years of clinical practice, certified in integrative nutrition. Your annual exam goes beyond a prescription: ocular health, lifestyle, screen habits, sleep, dry eye, and nutrition.</p>
+        <p class="reveal" style="color: var(--ink-soft);">It's why patients drive in from across Chicagoland. It's also why we're the only optical in the area where you can have a conversation about omega-3s and a Tom Ford bespoke fitting in the same visit.</p>
+        <a class="link-arrow reveal" href="services/index.html" style="margin-top: 20px;">Explore Eye Care &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= BRAND SHOWCASE (marquee + pinned horizontal scroll together) ======= -->
+<section class="showcase" aria-label="Independent designer eyewear">
+  <div class="showcase-marquee-bar">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track bold">
+        <span>Lindberg</span><span>Tom Ford</span><span>Dita</span><span>Barton Perreira</span>
+        <span>Anne &amp; Valentin</span><span>Thierry Lasry</span><span>l.a. Eyeworks</span>
+        <span>Oliver Goldsmith</span><span>Lafont</span><span>Theo</span><span>Sospiri</span>
+        <span>Orgreen</span><span>Chanel</span><span>FHone</span><span>David Spencer Kids</span>
+        <!-- duplicate for seamless loop -->
+        <span>Lindberg</span><span>Tom Ford</span><span>Dita</span><span>Barton Perreira</span>
+        <span>Anne &amp; Valentin</span><span>Thierry Lasry</span><span>l.a. Eyeworks</span>
+        <span>Oliver Goldsmith</span><span>Lafont</span><span>Theo</span><span>Sospiri</span>
+        <span>Orgreen</span><span>FHone</span>
+      </div>
+    </div>
+  </div>
+  <div class="showcase-pin">
+    <div class="showcase-track">
+
+      <div class="showcase-side">
+        <div>
+          <span class="eyebrow">The Collection</span>
+          <h2 data-anim="rise">Curated <em>Independents.</em></h2>
+          <p class="blurb">Fourteen houses from eight cities. Every brand sits in our display cases right now.</p>
+          <div class="showcase-arrow" aria-hidden="true">
+            <span>Scroll</span>
+            <svg viewBox="0 0 110 20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+              <line class="shaft" x1="0" y1="10" x2="96" y2="10"/>
+              <polyline points="84,2 100,10 84,18"/>
+            </svg>
+          </div>
+          <a class="showcase-mobile-cta" href="eyewear/independent-designer-eyewear.html">
+            See all 14 designers <em>&rarr;</em>
+          </a>
+          <div class="showcase-mobile-image" aria-hidden="true"></div>
+        </div>
+        <div class="showcase-counter"><span class="num">01</span> <span>/ 14</span></div>
+      </div>
+
+
+      <a class="showcase-panel has-photo" href="eyewear/lindberg.html" style="--accent: #b8b3a6; background-image: url('images/brands/lindberg.png');">
+        <div>
+          <span class="showcase-panel-num">01</span>
+          <div class="showcase-panel-meta">Denmark · Since 1969</div>
+          <h3>Lindberg</h3>
+          <p class="panel-tag">Discreet Danish elegance &mdash; engineered without a single screw or weld.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.2" style="color: rgba(184,179,166,0.9);">
+          <rect x="20" y="28" width="120" height="64" rx="32"/>
+          <rect x="180" y="28" width="120" height="64" rx="32"/>
+          <line x1="140" y1="60" x2="180" y2="60"/>
+        </svg>
+        <span class="showcase-panel-cta">View Lindberg &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/tom-ford.html" style="--accent: #c9a35d; background-image: url('images/brands/tom-ford.png');">
+        <div>
+          <span class="showcase-panel-num">02</span>
+          <div class="showcase-panel-meta">USA · Made in Italy · Since 2005</div>
+          <h3>Tom Ford</h3>
+          <p class="panel-tag">American luxury, Italian craft &mdash; the most recognizable T in eyewear.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(255,220,150,0.9);">
+          <path d="M20 32 Q40 22 90 22 Q130 22 140 38 Q145 70 110 88 Q70 92 40 80 Q15 60 20 32 Z"/>
+          <path d="M180 32 Q200 22 250 22 Q290 22 300 38 Q305 70 270 88 Q230 92 200 80 Q175 60 180 32 Z"/>
+          <line x1="140" y1="50" x2="180" y2="50" stroke-width="3"/>
+        </svg>
+        <span class="showcase-panel-cta">View Tom Ford &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/dita.html" style="--accent: #4a463f; background-image: url('images/brands/dita.png');">
+        <div>
+          <span class="showcase-panel-num">03</span>
+          <div class="showcase-panel-meta">Los Angeles · Since 1995</div>
+          <h3>Dita</h3>
+          <p class="panel-tag">California luxury, hand-finished in Japan. The frame Hollywood quietly wears.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(255,255,255,0.7);">
+          <path d="M20 32 Q40 22 90 22 Q130 22 140 38 Q145 70 110 88 Q70 92 40 80 Q15 60 20 32 Z" />
+          <path d="M180 32 Q200 22 250 22 Q290 22 300 38 Q305 70 270 88 Q230 92 200 80 Q175 60 180 32 Z" />
+          <line x1="140" y1="50" x2="180" y2="50" stroke-width="3"/>
+        </svg>
+        <span class="showcase-panel-cta">View Dita &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/barton-perreira.html" style="--accent: #c9a35d; background-image: url('images/brands/barton-perreira.png');">
+        <div>
+          <span class="showcase-panel-num">04</span>
+          <div class="showcase-panel-meta">California · Since 2007</div>
+          <h3>Barton Perreira</h3>
+          <p class="panel-tag">Old-Hollywood ease, contemporary edge. The choice of style insiders.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.2" style="color: rgba(225,200,140,0.85);">
+          <path d="M16 32 L140 22 Q150 30 150 50 Q150 88 110 92 Q40 92 20 80 Q10 60 16 32 Z"/>
+          <path d="M170 22 L294 32 Q304 60 296 80 Q276 92 200 92 Q170 88 170 50 Q170 30 170 22 Z"/>
+          <line x1="150" y1="48" x2="170" y2="48"/>
+        </svg>
+        <span class="showcase-panel-cta">View Barton Perreira &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/anne-valentin.html" style="--accent: #6e2a2a; background-image: url('images/brands/anne-valentin.png');">
+        <div>
+          <span class="showcase-panel-num">05</span>
+          <div class="showcase-panel-meta">Toulouse · Since 1980</div>
+          <h3>Anne &amp; Valentin</h3>
+          <p class="panel-tag">French frames that refuse to apologize. Color theory you can wear.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(212,168,160,0.95);">
+          <path d="M20 30 Q60 14 120 24 Q140 60 100 86 Q50 86 30 66 Q15 48 20 30 Z"/>
+          <path d="M170 24 Q230 14 270 30 Q280 48 270 66 Q260 86 220 86 Q180 86 160 60 Q160 36 170 24 Z"/>
+          <line x1="120" y1="50" x2="160" y2="50"/>
+        </svg>
+        <span class="showcase-panel-cta">View Anne &amp; Valentin &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/thierry-lasry.html" style="--accent: #c9876b; background-image: url('images/brands/thierry-lasry.png');">
+        <div>
+          <span class="showcase-panel-num">06</span>
+          <div class="showcase-panel-meta">Paris · Since 2006</div>
+          <h3>Thierry Lasry</h3>
+          <p class="panel-tag">Couture sunwear and optical. Parisian, uncompromising, unmistakable.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.5" style="color: rgba(255,200,170,0.85);">
+          <path d="M16 26 L150 26 L140 96 L36 96 Z"/>
+          <path d="M170 26 L304 26 L284 96 L180 96 Z"/>
+          <line x1="150" y1="48" x2="170" y2="48"/>
+        </svg>
+        <span class="showcase-panel-cta">View Thierry Lasry &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/la-eyeworks.html" style="--accent: #8a7553; background-image: url('images/brands/la-eyeworks.png');">
+        <div>
+          <span class="showcase-panel-num">07</span>
+          <div class="showcase-panel-meta">Los Angeles · Since 1979</div>
+          <h3>l.a. Eyeworks</h3>
+          <p class="panel-tag">Original LA expression. The frame on the cool kids' faces for 45 years.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.5" style="color: rgba(240,232,212,0.85);">
+          <path d="M14 30 Q40 18 120 22 Q150 26 150 50 Q150 92 110 96 Q40 96 24 84 Q8 60 14 30 Z"/>
+          <path d="M170 22 Q250 18 296 30 Q312 60 304 84 Q280 96 200 96 Q170 92 170 50 Q170 26 170 22 Z"/>
+          <line x1="150" y1="50" x2="170" y2="50"/>
+        </svg>
+        <span class="showcase-panel-cta">View l.a. Eyeworks &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/oliver-goldsmith.html" style="--accent: #e0d3b4; background-image: url('images/brands/oliver-goldsmith.png');">
+        <div>
+          <span class="showcase-panel-num">08</span>
+          <div class="showcase-panel-meta">London · Since 1926</div>
+          <h3>Oliver Goldsmith</h3>
+          <p class="panel-tag">British heritage. The frames Audrey Hepburn made famous, still made by the same family.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(60,50,40,0.85);">
+          <path d="M16 26 Q40 14 130 22 L150 50 Q140 92 100 92 Q40 92 20 78 Q4 50 16 26 Z"/>
+          <path d="M170 22 Q260 14 304 26 Q316 50 300 78 Q280 92 220 92 Q180 92 170 50 Z"/>
+          <line x1="150" y1="46" x2="170" y2="46"/>
+        </svg>
+        <span class="showcase-panel-cta">View Oliver Goldsmith &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/lafont.html" style="--accent: #d4a8a0; background-image: url('images/brands/lafont.png');">
+        <div>
+          <span class="showcase-panel-num">09</span>
+          <div class="showcase-panel-meta">Paris · Since 1923</div>
+          <h3>Lafont</h3>
+          <p class="panel-tag">A century of Parisian eyewear, still independent and family-run.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(255,200,200,0.85);">
+          <rect x="16" y="26" width="134" height="64" rx="14"/>
+          <rect x="170" y="26" width="134" height="64" rx="14"/>
+          <line x1="150" y1="58" x2="170" y2="58"/>
+        </svg>
+        <span class="showcase-panel-cta">View Lafont &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/theo.html" style="--accent: #5a6356; background-image: url('images/brands/theo.png');">
+        <div>
+          <span class="showcase-panel-num">10</span>
+          <div class="showcase-panel-meta">Antwerp · Since 1989</div>
+          <h3>Theo</h3>
+          <p class="panel-tag">Belgian design that refuses to be normal. For people who feel the same way.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.5" style="color: rgba(180,200,170,0.85);">
+          <polygon points="20,28 150,20 150,90 30,96"/>
+          <polygon points="170,20 300,28 290,96 170,90"/>
+          <line x1="150" y1="50" x2="170" y2="50"/>
+        </svg>
+        <span class="showcase-panel-cta">View Theo &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/sospiri.html" style="--accent: #f0e8d4; background-image: url('images/brands/sospiri.png');">
+        <div>
+          <span class="showcase-panel-num">11</span>
+          <div class="showcase-panel-meta">Italy · Since 2014</div>
+          <h3>Sospiri</h3>
+          <p class="panel-tag">Hand-laid Italian acetate. Small-batch luxury from the Veneto.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(80,68,50,0.85);">
+          <ellipse cx="80" cy="58" rx="68" ry="36"/>
+          <ellipse cx="240" cy="58" rx="68" ry="36"/>
+          <line x1="148" y1="58" x2="172" y2="58"/>
+        </svg>
+        <span class="showcase-panel-cta">View Sospiri &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/orgreen.html" style="--accent: #6e5022; background-image: url('images/brands/orgreen.png');">
+        <div>
+          <span class="showcase-panel-num">12</span>
+          <div class="showcase-panel-meta">Denmark · Since 1997</div>
+          <h3>Orgreen</h3>
+          <p class="panel-tag">Hand-finished Danish titanium. 240 colors, infinite restraint.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.2" style="color: rgba(255,210,140,0.9);">
+          <path d="M22 38 L142 38 L138 82 L26 82 Z"/>
+          <path d="M178 38 L298 38 L294 82 L182 82 Z"/>
+          <line x1="142" y1="58" x2="178" y2="58"/>
+        </svg>
+        <span class="showcase-panel-cta">View Orgreen &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/fhone.html" style="--accent: #c9a35d; background-image: url('images/brands/fhone.png');">
+        <div>
+          <span class="showcase-panel-num">13</span>
+          <div class="showcase-panel-meta">France · Since 2015</div>
+          <h3>FHone</h3>
+          <p class="panel-tag">French acetate, generous shapes, color that pops.</p>
+        </div>
+        <svg class="showcase-panel-frame" viewBox="0 0 320 120" fill="none" stroke="currentColor" stroke-width="2.4" style="color: rgba(255,220,150,0.9);">
+          <path d="M16 22 Q40 14 140 22 Q150 30 150 56 Q150 96 110 96 Q40 96 24 84 Q4 50 16 22 Z"/>
+          <path d="M170 22 Q260 14 296 22 Q316 50 296 84 Q280 96 220 96 Q170 96 170 56 Q170 30 170 22 Z"/>
+          <line x1="150" y1="50" x2="170" y2="50"/>
+        </svg>
+        <span class="showcase-panel-cta">View FHone &rarr;</span>
+      </a>
+
+      <a class="showcase-panel has-photo" href="eyewear/index.html" style="--accent: #1c1c1a; background-image: url('images/brands/full-collection.png');">
+        <div>
+          <span class="showcase-panel-num">14</span>
+          <div class="showcase-panel-meta">Plus Reading · Kids · Sun</div>
+          <h3>The full collection.</h3>
+          <p class="panel-tag">Every brand, every shape, in our cases right now. Come walk the floor.</p>
+        </div>
+        <span class="showcase-panel-cta">Browse all brands &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= REVERSE MARQUEE ======= -->
+<section style="padding: 0; background: var(--bg-deep); border-top: 1px solid rgba(245,241,234,0.1);">
+  <div class="marquee reverse" aria-hidden="true" style="color: rgba(245,241,234,0.4);">
+    <div class="marquee-track">
+      <span>Independent</span><span>Hand-finished</span><span>Made-to-Order</span>
+      <span>Curated</span><span>Italian Acetate</span><span>Danish Titanium</span>
+      <span>Bespoke</span><span>Specialty Lenses</span><span>Integrative</span>
+      <span>Independent</span><span>Hand-finished</span><span>Made-to-Order</span>
+      <span>Curated</span><span>Italian Acetate</span><span>Danish Titanium</span>
+      <span>Bespoke</span><span>Specialty Lenses</span><span>Integrative</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= LENS TECHNOLOGY ======= -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Lens Technology</span>
+      <h2 class="reveal">The lens does the work.<br>The frame gets the&nbsp;credit.</h2>
+      <p class="lead reveal" style="margin-top: 20px;">Five specialty lens technologies you'll struggle to find under one roof anywhere else in Chicago. We were early adopters on every one of these, and we'll explain plainly why a particular lens is right for your eyes.</p>
+    </div>
+
+    <div class="spec-list">
+      <div data-anim="rise">
+        <span class="eyebrow">FDA-Authorized</span>
+        <h3>Stellest</h3>
+        <p>Slows myopia progression in children by up to 67%. Worn during waking hours. Game-changing for families with progressive nearsightedness.</p>
+        <a class="link-arrow" href="eyewear/stellest.html" style="font-size: 0.78rem;">Learn more &rarr;</a>
+      </div>
+      <div data-anim="rise">
+        <span class="eyebrow">Digital Strain</span>
+        <h3>Neurolens</h3>
+        <p>The first prescription lens that addresses eye misalignment behind chronic headaches, neck pain, and screen fatigue.</p>
+        <a class="link-arrow" href="eyewear/neurolens.html" style="font-size: 0.78rem;">Learn more &rarr;</a>
+      </div>
+      <div data-anim="rise">
+        <span class="eyebrow">Migraine Relief</span>
+        <h3>Avulux</h3>
+        <p>Filters specific wavelengths shown to trigger light-sensitive migraine. The most-recommended lens in light-sensitivity protocols.</p>
+        <a class="link-arrow" href="eyewear/avulux.html" style="font-size: 0.78rem;">Learn more &rarr;</a>
+      </div>
+      <div data-anim="rise">
+        <span class="eyebrow">Color Vision</span>
+        <h3>Enchroma</h3>
+        <p>Engineered lenses that help people with red-green color vision deficiency see color more vividly. Bring tissues for the fitting.</p>
+        <a class="link-arrow" href="eyewear/enchroma.html" style="font-size: 0.78rem;">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= REVIEWS ======= -->
+<section class="bg-deep">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal" style="color: var(--gold);">In their words</span>
+      <h2 class="reveal" style="color: var(--bg);">Real reviews from real&nbsp;clients.</h2>
+    </div>
+
+    <div class="grid-3">
+      <div class="review reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Carrie is an exceptional eye doctor who truly goes above and beyond. Her holistic approach &mdash; nutrition, products, and clinical care &mdash; makes every visit informative."</blockquote>
+        <div class="attribution"><strong>Jessie W.</strong> · Google · April 2026</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Tennis-ball green aviators &mdash; everyone asks about them. Four years on and the color hasn't worn off. Customer service you don't get at a chain."</blockquote>
+        <div class="attribution"><strong>Jillian M.</strong> · Google · April 2025</div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Boyce was very helpful narrowing down my favorites &mdash; talked through how each frame would fit in my work setting. The store itself is beautiful."</blockquote>
+        <div class="attribution"><strong>Mark R.</strong> · Google · August 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= LOCATIONS ======= -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow reveal">Two Chicago Locations</span>
+      <h2 class="reveal">Come see the&nbsp;collection.</h2>
+      <p class="lead reveal" style="margin: 20px auto 0;">Both stores carry the full curated collection. Free parking in Hinsdale, valet next door in Gold Coast. Adjustments are always free, even if you didn't buy with us.</p>
+    </div>
+    <div class="grid-2">
+
+      <div class="location-card reveal">
+        <span class="eyebrow">Chicago</span>
+        <h3>Gold Coast</h3>
+        <div class="meta">
+          1205 N Dearborn Street<br>
+          Chicago, IL 60610<br><br>
+          <strong>312 943 2020</strong><br>
+          goldcoast@glimpsevision.com<br><br>
+          <strong>Hours</strong><br>
+          Mon 10–6 &middot; Tue 10–7 &middot; Wed Closed<br>
+          Thu 10–6 &middot; Fri 10–6 &middot; Sat 9–3 &middot; Sun Closed
+        </div>
+        <div class="ctas">
+          <a class="btn btn-primary magnetic" href="locations/gold-coast.html">Visit Gold Coast</a>
+          <a class="btn btn-outline" href="https://maps.google.com/maps?z=16&q=1205+n+dearborn+st+chicago+il+60610" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="location-card reveal">
+        <span class="eyebrow">Suburbs</span>
+        <h3>Hinsdale</h3>
+        <div class="meta">
+          12 East First Street<br>
+          Hinsdale, IL 60521<br><br>
+          <strong>630 325 2020</strong><br>
+          hinsdale@glimpsevision.com<br><br>
+          <strong>Hours</strong><br>
+          Mon 10–6 &middot; Tue 10–5 &middot; Wed Closed<br>
+          Thu 11–7 &middot; Fri 10–5 &middot; Sat 9–2 &middot; Sun Closed
+        </div>
+        <div class="ctas">
+          <a class="btn btn-primary magnetic" href="locations/hinsdale.html">Visit Hinsdale</a>
+          <a class="btn btn-outline" href="https://maps.google.com/maps?z=16&q=12+e+first+street+hinsdale+il+60521" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= JOURNAL ======= -->
+<section class="bg-card" style="border-top: 1px solid var(--line);">
+  <div class="container">
+    <div class="flex-between section-head">
+      <div>
+        <span class="eyebrow reveal">Journal</span>
+        <h2 class="reveal">Style notes &amp; clinical reads.</h2>
+      </div>
+      <a class="link-arrow reveal" href="buzz/index.html">View all posts &rarr;</a>
+    </div>
+    <div class="grid-3">
+      <article class="card reveal">
+        <div class="card-image" data-tone="gold"></div>
+        <span class="eyebrow">Style</span>
+        <h3>It's all in the details.</h3>
+        <p>The temple, the bridge, the tiniest rivet. A guide to the small choices that make a designer frame feel custom.</p>
+        <a class="link-arrow" href="buzz/index.html">Read &rarr;</a>
+      </article>
+      <article class="card reveal">
+        <div class="card-image" data-tone="sage"></div>
+        <span class="eyebrow">Eye Health</span>
+        <h3>Should your child be on Stellest?</h3>
+        <p>Myopia is rising in kids worldwide. What the FDA-authorized lens does, who it's for, and what to expect at a fitting.</p>
+        <a class="link-arrow" href="buzz/index.html">Read &rarr;</a>
+      </article>
+      <article class="card reveal">
+        <div class="card-image" data-tone="rose"></div>
+        <span class="eyebrow">Behind the Brand</span>
+        <h3>Why Lindberg eyeglasses have no screws.</h3>
+        <p>Inside the Danish atelier where every frame is engineered to weld nothing, screw nothing, and last decades.</p>
+        <a class="link-arrow" href="buzz/index.html">Read &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= CTA STRIP ======= -->
+<section class="bg-deep" style="padding: clamp(80px, 11vw, 150px) 0;">
+  <div class="container text-center">
+    <h2 class="reveal" style="color: var(--bg); max-width: 22ch; margin: 0 auto;">Ready to see (and be seen) properly?</h2>
+    <p class="lead reveal" style="color: rgba(245,241,234,0.78); max-width: 50ch; margin: 24px auto 40px;">Book an exam at either location, or just stop in. We'll put a kettle on.</p>
+    <div class="reveal" style="display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center;">
+      <a class="btn btn-primary magnetic" href="schedule.html" style="background: var(--bg); color: var(--ink); border-color: var(--bg);">Book Now</a>
+      <a class="btn btn-ghost magnetic" href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Glimpse Vision <span class="brand-dot"></span></div>
+        <p class="footer-tag">Curated independent eyewear and integrative eye care in Chicago's Gold Coast and historic Hinsdale.</p>
+      </div>
+      <div>
+        <h4>Eyewear</h4>
+        <ul>
+          <li><a href="eyewear/index.html">All Brands</a></li>
+          <li><a href="eyewear/lens-treatments.html">Lens Technology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Eye Care</h4>
+        <ul>
+          <li><a href="services/comprehensive-eye-exams.html">Comprehensive Exams</a></li>
+          <li><a href="services/pediatric-eye-exams.html">Pediatric</a></li>
+          <li><a href="services/dry-eye-evaluations.html">Dry Eye</a></li>
+          <li><a href="services/wellness.html">Wellness &amp; Nutrition</a></li>
+          <li><a href="services/contact-lenses.html">Contact Lenses</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="locations/gold-coast.html">Gold Coast &middot; <span style="color: var(--gold);">312 943 2020</span></a></li>
+          <li><a href="locations/hinsdale.html">Hinsdale &middot; <span style="color: var(--gold);">630 325 2020</span></a></li>
+          <li><a href="schedule.html">Schedule Now</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="experts/index.html">Our Experts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Glimpse Vision. All rights reserved.</div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/glimpsevisionoptical/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/GlimpseVisionOptical/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/51598649" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.pinterest.com/pin/705235622882780196/" target="_blank" rel="noopener">Pinterest</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
