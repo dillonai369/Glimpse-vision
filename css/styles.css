@@ -1245,6 +1245,10 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   line-height: 0;
 }
 .marquee.reverse .marquee-track { animation-direction: reverse; animation-duration: 75s; }
+
+/* Default visibility for the swappable marquees in the reverse-marquee section */
+.mobile-only-marquee { display: none; }
+.desktop-only-marquee { display: block; }
 .marquee-track.bold > span { font-style: normal; font-weight: 400; }
 @keyframes marquee {
   to { transform: translateX(calc(-50% - clamp(20px, 2.5vw, 45px))); }
@@ -1559,6 +1563,26 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   .showcase-counter { display: none; }
   .showcase-mobile-cta { display: inline-flex; }
   .showcase-panel { display: none; }
+
+  /* Mobile: hide the top brand marquee inside the showcase; the same marquee
+     now appears in the bottom (reverse-marquee) section instead. */
+  .showcase-marquee-bar { display: none; }
+
+  /* Mobile: swap reverse-marquee content for brand-names marquee */
+  .desktop-only-marquee { display: none; }
+  .mobile-only-marquee { display: block; }
+
+  /* Mobile: light bg + dark text on the bottom marquee to match the (now hidden)
+     top brand marquee's appearance */
+  .reverse-marquee-section {
+    background: var(--bg) !important;
+    border-top: 1px solid var(--line) !important;
+  }
+  .reverse-marquee-section .mobile-only-marquee { color: var(--ink); }
+
+  /* Tighten the gap between the showcase content and the bottom marquee */
+  .showcase-side { padding-bottom: clamp(24px, 6vw, 40px); }
+  .showcase-mobile-image { margin-bottom: 0; }
 
   /* Long collections banner image below the mobile CTA */
   .showcase-mobile-image {

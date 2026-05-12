@@ -576,8 +576,9 @@
 </section>
 
 <!-- ======= REVERSE MARQUEE ======= -->
-<section style="padding: 0; background: var(--bg-deep); border-top: 1px solid rgba(245,241,234,0.1);">
-  <div class="marquee reverse" aria-hidden="true" style="color: rgba(245,241,234,0.4);">
+<section class="reverse-marquee-section" style="padding: 0; background: var(--bg-deep); border-top: 1px solid rgba(245,241,234,0.1);">
+  <!-- Desktop / tablet: original material-name reverse marquee -->
+  <div class="marquee reverse desktop-only-marquee" aria-hidden="true" style="color: rgba(245,241,234,0.4);">
     <div class="marquee-track">
       <span>Independent</span><span>Hand-finished</span><span>Made-to-Order</span>
       <span>Curated</span><span>Italian Acetate</span><span>Danish Titanium</span>
@@ -585,6 +586,20 @@
       <span>Independent</span><span>Hand-finished</span><span>Made-to-Order</span>
       <span>Curated</span><span>Italian Acetate</span><span>Danish Titanium</span>
       <span>Bespoke</span><span>Specialty Lenses</span><span>Integrative</span>
+    </div>
+  </div>
+  <!-- Mobile: brand-names marquee replaces the reverse one -->
+  <div class="marquee mobile-only-marquee" aria-hidden="true">
+    <div class="marquee-track bold">
+      <span>Lindberg</span><span>Tom Ford</span><span>Dita</span><span>Barton Perreira</span>
+      <span>Anne &amp; Valentin</span><span>Thierry Lasry</span><span>l.a. Eyeworks</span>
+      <span>Oliver Goldsmith</span><span>Lafont</span><span>Theo</span><span>Sospiri</span>
+      <span>Orgreen</span><span>Chanel</span><span>FHone</span><span>David Spencer Kids</span>
+      <!-- duplicate for seamless loop -->
+      <span>Lindberg</span><span>Tom Ford</span><span>Dita</span><span>Barton Perreira</span>
+      <span>Anne &amp; Valentin</span><span>Thierry Lasry</span><span>l.a. Eyeworks</span>
+      <span>Oliver Goldsmith</span><span>Lafont</span><span>Theo</span><span>Sospiri</span>
+      <span>Orgreen</span><span>FHone</span>
     </div>
   </div>
 </section>
