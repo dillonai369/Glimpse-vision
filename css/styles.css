@@ -1583,7 +1583,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   /* Bigger text + faster scroll for the mobile brand marquee */
   .mobile-only-marquee { padding: 6px 0; }
   .mobile-only-marquee .marquee-track {
-    animation-duration: 38s;
+    animation-duration: 22s;
     gap: clamp(34px, 7vw, 60px);
     padding-right: clamp(34px, 7vw, 60px);
   }
