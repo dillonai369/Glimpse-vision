@@ -1580,6 +1580,18 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   }
   .reverse-marquee-section .mobile-only-marquee { color: var(--ink); }
 
+  /* Bigger text + faster scroll for the mobile brand marquee */
+  .mobile-only-marquee { padding: 6px 0; }
+  .mobile-only-marquee .marquee-track {
+    animation-duration: 38s;
+    gap: clamp(34px, 7vw, 60px);
+    padding-right: clamp(34px, 7vw, 60px);
+  }
+  .mobile-only-marquee .marquee-track > span {
+    font-size: clamp(1.5rem, 5.2vw, 2rem);
+    gap: clamp(34px, 7vw, 60px);
+  }
+
   /* Tighten the gap between the showcase content and the bottom marquee */
   .showcase-side { padding-bottom: clamp(24px, 6vw, 40px); }
   .showcase-mobile-image { margin-bottom: 0; }
