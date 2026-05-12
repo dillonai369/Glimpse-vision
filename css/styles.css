@@ -41,6 +41,7 @@
 *::selection { background: var(--gold); color: var(--white); }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html, body { overflow-x: clip; }
 
 body {
   font-family: var(--body);
@@ -2164,4 +2165,23 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   .marquee-track { animation: none; }
   .hero-frames svg { animation: none; }
   .brand-dot::after { animation: none; }
+}
+
+/* =========================================================
+   COLLECTIONS PAGE — full-bleed cards on mobile
+   ========================================================= */
+@media (max-width: 820px) {
+  /* Edge-to-edge grid (no container padding) just for the cards section.
+     Page-header (title/lead) keeps its container padding for readability. */
+  .page-collections .collections-grid-section > .container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+  .page-collections .collections-grid-section .grid-3 { gap: 18px; }
+  /* No outer border/shadow so cards sit flush against the viewport edges */
+  .page-collections .collections-grid-section .card {
+    border-left: 0;
+    border-right: 0;
+  }
 }
