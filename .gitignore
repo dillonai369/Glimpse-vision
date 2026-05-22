@@ -9,3 +9,4 @@
 
 # Local backups
 **/originals/
+.vercel
