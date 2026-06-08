@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/services/red-light-therapy",
+      "destination": "/services/low-light-therapy",
+      "permanent": true
+    },
+    {
+      "source": "/services/red-light-therapy.html",
+      "destination": "/services/low-light-therapy",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)\\.(png|webp|jpg|jpeg|gif|svg|mp4|webm|woff2)",
