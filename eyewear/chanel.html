@@ -196,7 +196,7 @@
 
 <!-- ====== CINEMATIC HERO — wide 16:9 brand band ====== -->
 <section style="padding: 0; position: relative; background: var(--ink); overflow: hidden;">
-  <div class="brand-hero-band" data-tone="warm" style="position: relative; height: clamp(440px, 64vh, 680px); background-image: url('../images/brands/chanel-hero.webp'); background-size: cover; background-position: center;">
+  <div class="brand-hero-band" data-tone="warm" style="position: relative; height: clamp(440px, 64vh, 680px); background-image: url('../images/brands/chanel-hero.webp'); background-size: cover; background-position: center 62%;">
     <!-- Cinematic gradient overlay -->
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,28,26,0.55) 0%, rgba(28,28,26,0.25) 40%, rgba(28,28,26,0.82) 100%);"></div>
     <!-- Flush-left text aligned to header logo -->
@@ -222,30 +222,38 @@
         <p class="lead">Chanel eyewear translates the house&rsquo;s codes &mdash; the camellia, the interlocking C&rsquo;s, the tweed, the pearls &mdash; into frames hand-finished in Italy under the strictest Chanel quality control. Worn with intention, never as an afterthought. The optical and sunwear collections each carry the signature details that make Chanel the most recognized name on any face.</p>
         <p style="color: var(--ink-soft); margin-top: 16px;"><strong>Best for:</strong> Modern luxury wearers &middot; Statement dressers &middot; Anyone who appreciates the quiet authority of an unmistakable detail</p>
       </div>
-      <div data-tone="warm" style="background-image: url('../images/brands/chanel-1.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 4px;"></div>
+      <div data-tone="warm" style="background-image: url('../images/brands/chanel-1.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
     </div>
   </div>
 </section>
 
-<!-- ====== WHY WE CARRY IT — details grid ====== -->
-<section class="bg-card" style="border-top: 1px solid var(--line);">
+<!-- ====== WHY WE CARRY IT — details with numbered markers + gold rules ====== -->
+<section class="bg-card" style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: clamp(80px, 10vw, 140px) 0;">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Why we carry Chanel</span>
-      <h2>The details that matter.</h2>
+    <div style="text-align: center; max-width: 60ch; margin: 0 auto 70px;">
+      <span class="eyebrow" style="color: var(--gold);">Why we carry Chanel</span>
+      <div style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px auto 0;"></div>
+      <h2 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.2rem, 3.5vw, 3.4rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">The details that matter.</h2>
+      <p style="color: var(--ink-soft); line-height: 1.65; margin-top: 18px; font-size: 1.02rem;">Every brand we carry earns its place. Here&rsquo;s why Chanel is in our cases.</p>
     </div>
-    <div class="grid-3">
-        <div>
-          <h3>Italian craft, Parisian code</h3>
-          <p>Every Chanel frame is hand-finished in Italy with the materials and detailing reserved for the house&rsquo;s luxury divisions. The build quality is on a different tier from mass luxury.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; background: var(--bg); border-radius: 8px; border: 1px solid var(--line); overflow: hidden;">
+        <div style="position: relative; padding: 38px 36px; border-right: 1px solid var(--line);">
+          <div style="font-family: var(--display); font-style: italic; font-weight: 400; font-size: 1.1rem; color: var(--gold); margin-bottom: 8px;">01.</div>
+          <div style="width: 36px; height: 1.5px; background: var(--gold); margin-bottom: 18px;"></div>
+          <h3 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: 1.55rem; line-height: 1.2; color: var(--ink); margin-bottom: 12px;">Italian craft, Parisian code</h3>
+          <p style="color: var(--ink-soft); line-height: 1.65; font-size: 0.97rem;">Every Chanel frame is hand-finished in Italy with the materials and detailing reserved for the house&rsquo;s luxury divisions. The build quality is on a different tier from mass luxury.</p>
         </div>
-        <div>
-          <h3>The signature details</h3>
-          <p>The interlocking C&rsquo;s, the camellia motif, the pearl temple tips, and the tweed-pattern acetate &mdash; each collection carries one or more of the house&rsquo;s codes. Subtle from across the room, immediately recognizable up close.</p>
+        <div style="position: relative; padding: 38px 36px; border-right: 1px solid var(--line);">
+          <div style="font-family: var(--display); font-style: italic; font-weight: 400; font-size: 1.1rem; color: var(--gold); margin-bottom: 8px;">02.</div>
+          <div style="width: 36px; height: 1.5px; background: var(--gold); margin-bottom: 18px;"></div>
+          <h3 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: 1.55rem; line-height: 1.2; color: var(--ink); margin-bottom: 12px;">The signature details</h3>
+          <p style="color: var(--ink-soft); line-height: 1.65; font-size: 0.97rem;">The interlocking C&rsquo;s, the camellia motif, the pearl temple tips, and the tweed-pattern acetate &mdash; each collection carries one or more of the house&rsquo;s codes. Subtle from across the room, immediately recognizable up close.</p>
         </div>
-        <div>
-          <h3>Personally chosen at Glimpse</h3>
-          <p>Carrie selects each Chanel piece personally. We don&rsquo;t carry everything &mdash; we carry the shapes and colorways that work on real faces in real light.</p>
+        <div style="position: relative; padding: 38px 36px; border-right: 1px solid var(--line);">
+          <div style="font-family: var(--display); font-style: italic; font-weight: 400; font-size: 1.1rem; color: var(--gold); margin-bottom: 8px;">03.</div>
+          <div style="width: 36px; height: 1.5px; background: var(--gold); margin-bottom: 18px;"></div>
+          <h3 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: 1.55rem; line-height: 1.2; color: var(--ink); margin-bottom: 12px;">Personally chosen at Glimpse</h3>
+          <p style="color: var(--ink-soft); line-height: 1.65; font-size: 0.97rem;">Carrie selects each Chanel piece personally. We don&rsquo;t carry everything &mdash; we carry the shapes and colorways that work on real faces in real light.</p>
         </div>
     </div>
   </div>
@@ -256,8 +264,8 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">In the cases</span><h2>Chanel at Glimpse.</h2></div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-      <div data-tone="warm" style="background-image: url('../images/brands/chanel-2.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 4px;"></div>
-      <div data-tone="warm" style="background-image: url('../images/brands/chanel-3.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 4px;"></div>
+      <div data-tone="warm" style="background-image: url('../images/brands/chanel-2.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
+      <div data-tone="warm" style="background-image: url('../images/brands/chanel-3.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
     </div>
   </div>
 </section>
