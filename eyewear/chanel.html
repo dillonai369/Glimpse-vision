@@ -259,16 +259,54 @@
   </div>
 </section>
 
-<!-- ====== EDITORIAL PAIR — two square photos side by side ====== -->
+<!-- ====== EDITORIAL GALLERY — responsive: grid on desktop, scroll-snap carousel on mobile ====== -->
 <section>
   <div class="container">
     <div class="section-head"><span class="eyebrow">In the cases</span><h2>Chanel at Glimpse.</h2></div>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-      <div data-tone="warm" style="background-image: url('../images/brands/chanel-2.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
-      <div data-tone="warm" style="background-image: url('../images/brands/chanel-3.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
+    <div class="brand-gallery" data-count="4">
+      <div class="brand-gallery-item" data-tone="warm" style="background-image: url('../images/brands/chanel-2.webp');"></div>
+      <div class="brand-gallery-item" data-tone="warm" style="background-image: url('../images/brands/chanel-3.webp');"></div>
+      <div class="brand-gallery-item" data-tone="warm" style="background-image: url('../images/brands/chanel-4.webp');"></div>
+      <div class="brand-gallery-item" data-tone="warm" style="background-image: url('../images/brands/chanel-5.webp');"></div>
     </div>
   </div>
 </section>
+
+<style>
+  /* Brand gallery — desktop: grid, mobile: horizontal snap-scroll */
+  .brand-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .brand-gallery-item {
+    background-color: var(--cream-dk);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1/1;
+    border-radius: 18px;
+    width: 100%;
+  }
+  @media (max-width: 820px) {
+    .brand-gallery {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-padding-left: 24px;
+      gap: 16px;
+      padding: 4px 24px 18px;
+      margin: 0 -20px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .brand-gallery::-webkit-scrollbar { display: none; }
+    .brand-gallery-item {
+      flex: 0 0 82%;
+      scroll-snap-align: start;
+    }
+  }
+</style>
 
 <!-- ====== CTA — both locations ====== -->
 <section class="bg-deep" style="padding: clamp(70px, 9vw, 130px) 0;">
