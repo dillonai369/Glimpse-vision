@@ -260,9 +260,12 @@
 </section>
 
 <!-- ====== EDITORIAL GALLERY — responsive: grid on desktop, scroll-snap carousel on mobile ====== -->
-<section>
+<section style="overflow: hidden;">
   <div class="container">
     <div class="section-head"><span class="eyebrow">In the cases</span><h2>Chanel at Glimpse.</h2></div>
+  </div>
+  <!-- Gallery breaks OUT of .container so images fill more screen on wide displays -->
+  <div class="brand-gallery-wrap">
     <div class="brand-gallery" data-count="4">
       <div class="brand-gallery-item" data-tone="warm" style="background-image: url('../images/brands/chanel-2.webp');"></div>
       <div class="brand-gallery-item" data-tone="warm" style="background-image: url('../images/brands/chanel-3.webp');"></div>
@@ -273,11 +276,17 @@
 </section>
 
 <style>
-  /* Brand gallery — desktop: grid, mobile: horizontal snap-scroll */
+  /* Wider container — gallery breaks out of the 1240px .container to ~1600px so squares feel bigger */
+  .brand-gallery-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 2.5vw, 36px);
+  }
+  /* Desktop grid — tighter gap so each square is visually bigger */
   .brand-gallery {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 22px;
+    gap: 12px;
   }
   .brand-gallery-item {
     background-color: var(--cream-dk);
@@ -294,7 +303,7 @@
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       scroll-padding-left: 24px;
-      gap: 16px;
+      gap: 14px;
       padding: 4px 24px 18px;
       margin: 0 -20px;
       -webkit-overflow-scrolling: touch;
@@ -302,7 +311,7 @@
     }
     .brand-gallery::-webkit-scrollbar { display: none; }
     .brand-gallery-item {
-      flex: 0 0 82%;
+      flex: 0 0 86%;
       scroll-snap-align: start;
     }
   }

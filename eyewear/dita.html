@@ -260,26 +260,36 @@
 </section>
 
 <!-- ====== EDITORIAL GALLERY — responsive: grid on desktop, scroll-snap carousel on mobile ====== -->
-<section>
+<section style="overflow: hidden;">
   <div class="container">
     <div class="section-head"><span class="eyebrow">In the cases</span><h2>Dita at Glimpse.</h2></div>
-    <div class="brand-gallery" data-count="6">
+  </div>
+  <!-- Gallery breaks OUT of .container so images fill more screen on wide displays -->
+  <div class="brand-gallery-wrap">
+    <div class="brand-gallery" data-count="7">
       <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-2.webp');"></div>
       <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-3.webp');"></div>
       <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-4.webp');"></div>
       <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-5.webp');"></div>
       <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-6.webp');"></div>
       <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-7.webp');"></div>
+      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/dita-8.webp');"></div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Brand gallery — desktop: grid, mobile: horizontal snap-scroll */
+  /* Wider container — gallery breaks out of the 1240px .container to ~1600px so squares feel bigger */
+  .brand-gallery-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 2.5vw, 36px);
+  }
+  /* Desktop grid — tighter gap so each square is visually bigger */
   .brand-gallery {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
   }
   .brand-gallery-item {
     background-color: var(--cream-dk);
@@ -296,7 +306,7 @@
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       scroll-padding-left: 24px;
-      gap: 16px;
+      gap: 14px;
       padding: 4px 24px 18px;
       margin: 0 -20px;
       -webkit-overflow-scrolling: touch;
@@ -304,7 +314,7 @@
     }
     .brand-gallery::-webkit-scrollbar { display: none; }
     .brand-gallery-item {
-      flex: 0 0 82%;
+      flex: 0 0 86%;
       scroll-snap-align: start;
     }
   }
@@ -319,24 +329,25 @@
       <div style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px auto 0;"></div>
       <h2 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">On the face. In the world.</h2>
     </div>
-    <div class="lifestyle-grid" data-count="4">
+    <div class="lifestyle-grid" data-count="3">
       <div class="lifestyle-item" style="background-image: url('../images/brands/dita-life-1.webp');"></div>
       <div class="lifestyle-item" style="background-image: url('../images/brands/dita-life-2.webp');"></div>
       <div class="lifestyle-item" style="background-image: url('../images/brands/dita-life-3.webp');"></div>
-      <div class="lifestyle-item" style="background-image: url('../images/brands/dita-life-4.webp');"></div>
     </div>
   </div>
 </section>
 <style>
   .lifestyle-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
   }
   .lifestyle-item {
     background-color: var(--cream-dk);
     background-size: cover;
-    background-position: center;
+    /* Anchor at bottom-center so the DITA / brand wordmark at the bottom
+       of each source photo lines up consistently across all images. */
+    background-position: center bottom;
     aspect-ratio: 3 / 4;
     border-radius: 18px;
     width: 100%;
