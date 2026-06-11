@@ -261,11 +261,19 @@
 
 <!-- ====== EDITORIAL GALLERY — responsive: grid on desktop, scroll-snap carousel on mobile ====== -->
 <section style="overflow: hidden;">
-  <div class="container">
-    <div class="section-head"><span class="eyebrow">In the cases</span><h2>Theo at Glimpse.</h2></div>
-  </div>
-  <!-- Gallery breaks OUT of .container so images fill more screen on wide displays -->
   <div class="brand-gallery-wrap">
+    <!-- Section header now lives INSIDE the same wider wrap as the gallery so
+         the eyebrow + h2 sit flush-left with the first photo. Right column
+         carries brand-specific copy. -->
+    <div class="brand-gallery-head">
+      <div>
+        <span class="eyebrow">In the cases</span>
+        <h2 style="margin-top: 6px;">Theo at Glimpse.</h2>
+      </div>
+      <div class="brand-gallery-lede">
+        <p>A curated edit of the active Theo collection. Optical, sunwear, and the shapes our opticians fit most. Bring a friend, take your time &mdash; the cases are open at both locations.</p>
+      </div>
+    </div>
     <div class="brand-gallery" data-count="2">
       <div class="brand-gallery-item" data-tone="sage" style="background-image: url('../images/brands/theo-2.webp');"></div>
       <div class="brand-gallery-item" data-tone="sage" style="background-image: url('../images/brands/theo-3.webp');"></div>
@@ -279,6 +287,31 @@
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 clamp(20px, 2.5vw, 36px);
+  }
+  /* Two-column header: eyebrow + h2 on the left (flush with first photo),
+     descriptive lede copy on the right. */
+  .brand-gallery-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 80px);
+    align-items: end;
+    margin-bottom: 38px;
+  }
+  .brand-gallery-lede p {
+    font-family: var(--body);
+    font-size: clamp(0.98rem, 1.05vw, 1.1rem);
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: 48ch;
+    margin-left: auto;
+  }
+  @media (max-width: 820px) {
+    .brand-gallery-head {
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .brand-gallery-lede p { margin-left: 0; }
   }
   /* Desktop grid — tighter gap so each square is visually bigger */
   .brand-gallery {
