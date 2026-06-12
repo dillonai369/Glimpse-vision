@@ -264,9 +264,11 @@
         <p>Therapeutic light panels deliver precise wavelengths under a clinical protocol &mdash; not the LED panels you&rsquo;ll find online. Sessions are painless, quiet, and typically 15&ndash;20 minutes.</p>
       </div>
     </div>
-    <!-- Gallery sits inside the same .container so the photos have the same
-         left/right gutter as the header above — no edge-to-edge bleed. -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 28px;">
+  </div>
+  <!-- Gallery in a slightly wider wrapper (max 1440px) — photos read bigger
+       than the 1240px container above, but still have visible side margins. -->
+  <div style="max-width: 1440px; margin: 28px auto 0; padding: 0 clamp(20px, 2.5vw, 36px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
       <div style="background-image: url('../images/services/lllt-session.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
       <div style="background-image: url('../images/services/lllt-equipment-2.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
       <div style="background-image: url('../images/services/lllt-detail.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
@@ -282,6 +284,22 @@
       <div class="card"><span class="eyebrow">Step 01</span><h3>Consultation &amp; eligibility.</h3><p>We start with a clinical evaluation to confirm LLLT is the right intervention for your specific condition. Not every patient is a candidate &mdash; that conversation matters.</p></div>
       <div class="card"><span class="eyebrow">Step 02</span><h3>The session.</h3><p>You relax under a therapeutic light panel positioned several inches above you. The treatment is painless and silent &mdash; typically 15&ndash;20 minutes.</p></div>
       <div class="card"><span class="eyebrow">Step 03</span><h3>Protocol &amp; follow-up.</h3><p>The number of sessions depends on your condition. We track outcomes objectively and adjust as needed &mdash; with at-home routines pairing the in-office work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== HONEST ANSWERS / OPTOMETRY-LED DIFFERENTIATOR ====== -->
+<section class="bg-card" style="border-top: 1px solid var(--line);">
+  <div class="container">
+    <div class="split reverse">
+      <div>
+        <span class="eyebrow">Why it&rsquo;s different here</span>
+        <h2>Optometry-led, not a spa.</h2>
+        <p class="lead">Unlike cosmetic medical spas, treatment in an optometry office focuses specifically on ocular surface disease, meibomian gland dysfunction, eyelid and facial conditions tied to vision, long-term dry eye management, and medical-grade diagnostic imaging.</p>
+        <p style="color: var(--ink-soft); line-height: 1.7; margin-top: 14px;">Conditions like acne, loose eyelids, rosacea, and skin lesions can contribute to chronic eye and vision issues. Your trusted eye doctor uses an integrative approach to evaluate skin health, eye health, and chronic disease holistically &mdash; treating from the inside out.</p>
+        <a class="btn btn-primary" href="../schedule.html" style="margin-top: 24px;">Book a Consultation</a>
+      </div>
+      <div style="background-image: url('../images/services/lllt-detail.webp'); background-size: cover; background-position: center; aspect-ratio: 4/5; border-radius: 18px;"></div>
     </div>
   </div>
 </section>
@@ -395,22 +413,6 @@
         <div class="faq-body"><p>Unlike cosmetic medical spas, an optometry-led setting focuses specifically on ocular surface disease, meibomian gland dysfunction, eyelid and facial conditions tied to vision, long-term dry eye management, and medical-grade diagnostic imaging. Conditions like acne, rosacea, loose eyelids and skin lesions can contribute to chronic eye and vision issues &mdash; our team treats from the inside out, holistically.</p></div>
       </details>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== HONEST ANSWERS / RELATED CARE ====== -->
-<section class="bg-card" style="border-top: 1px solid var(--line);">
-  <div class="container">
-    <div class="split reverse">
-      <div>
-        <span class="eyebrow">Why it&rsquo;s different here</span>
-        <h2>Optometry-led, not a spa.</h2>
-        <p class="lead">Unlike cosmetic medical spas, treatment in an optometry office focuses specifically on ocular surface disease, meibomian gland dysfunction, eyelid and facial conditions tied to vision, long-term dry eye management, and medical-grade diagnostic imaging.</p>
-        <p style="color: var(--ink-soft); line-height: 1.7; margin-top: 14px;">Conditions like acne, loose eyelids, rosacea, and skin lesions can contribute to chronic eye and vision issues. Your trusted eye doctor uses an integrative approach to evaluate skin health, eye health, and chronic disease holistically &mdash; treating from the inside out.</p>
-        <a class="btn btn-primary" href="../schedule.html" style="margin-top: 24px;">Book a Consultation</a>
-      </div>
-      <div style="background-image: url('../images/services/lllt-detail.webp'); background-size: cover; background-position: center; aspect-ratio: 4/5; border-radius: 18px;"></div>
     </div>
   </div>
 </section>
