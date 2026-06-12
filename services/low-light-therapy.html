@@ -223,7 +223,7 @@
         <p style="color: var(--ink-soft); line-height: 1.7; margin-top: 14px;">By stimulating cellular activity and optimizing cell function, light energy is converted into intracellular energy &mdash; helping tissues repair and regenerate more effectively. LLLT is safe, non-invasive, and used to address a variety of eye and skin conditions.</p>
         <p style="color: var(--ink-soft); line-height: 1.7; margin-top: 14px;">Backed by scientific research, LLLT helps reduce inflammation, improve meibomian gland function, and promote tissue repair. Individual outcomes vary, but LLLT is often paired with Intense Pulsed Light (IPL) and Radiofrequency (RF) treatments to enhance overall results.</p>
       </div>
-      <div style="background-image: url('../images/services/lllt-session.webp'); background-size: cover; background-position: center; aspect-ratio: 4/5; border-radius: 18px;"></div>
+      <div style="background-image: url('../images/services/lllt-equipment-1.webp'); background-size: cover; background-position: center; aspect-ratio: 4/5; border-radius: 18px;"></div>
     </div>
   </div>
 </section>
@@ -237,7 +237,7 @@
       <h2 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.2rem, 3.5vw, 3.4rem); line-height: 1.1; color: var(--ink); margin-top: 22px;">Eye and skin conditions we treat.</h2>
       <p style="color: var(--ink-soft); line-height: 1.65; margin-top: 16px;">A short list of the most common indications &mdash; we&rsquo;ll review whether LLLT is right for your specific case at consultation.</p>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; max-width: 1100px; margin: 0 auto;">
+    <div class="conditions-grid" style="max-width: 1100px; margin: 0 auto;">
       <div class="condition-pill"><strong>Dry eye disease</strong><span>The most common reason patients come in.</span></div>
       <div class="condition-pill"><strong>Meibomian gland dysfunction</strong><span>The leading cause of chronic dry eye.</span></div>
       <div class="condition-pill"><strong>Age-related macular degeneration</strong><span>Light-based support alongside other care.</span></div>
@@ -253,7 +253,9 @@
 
 <!-- ====== EDITORIAL EQUIPMENT BAND — three photos showing the experience ====== -->
 <section>
-  <div class="brand-gallery-wrap">
+  <!-- Header lives in .container so 'In session / What it looks like'
+       aligns with the rest of the page text & the logo top-left -->
+  <div class="container">
     <div class="brand-gallery-head">
       <div>
         <span class="eyebrow">In session</span>
@@ -263,8 +265,11 @@
         <p>Therapeutic light panels deliver precise wavelengths under a clinical protocol &mdash; not the LED panels you&rsquo;ll find online. Sessions are painless, quiet, and typically 15&ndash;20 minutes.</p>
       </div>
     </div>
+  </div>
+  <!-- Gallery photos stay in the wider wrap so the images still feel big -->
+  <div class="brand-gallery-wrap" style="margin-top: 38px;">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
-      <div style="background-image: url('../images/services/lllt-equipment-1.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
+      <div style="background-image: url('../images/services/lllt-session.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
       <div style="background-image: url('../images/services/lllt-equipment-2.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
       <div style="background-image: url('../images/services/lllt-detail.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
     </div>
@@ -443,6 +448,18 @@
 </section>
 
 <style>
+  /* Conditions grid — 9 items, clean 3x3 on desktop so 'Skin aging' doesn't orphan */
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 820px) {
+    .conditions-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .conditions-grid { grid-template-columns: 1fr; }
+  }
   /* Condition pills */
   .condition-pill {
     background: var(--bg);
