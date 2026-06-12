@@ -252,9 +252,8 @@
 </section>
 
 <!-- ====== EDITORIAL EQUIPMENT BAND — three photos showing the experience ====== -->
-<section>
-  <!-- Header lives in .container so 'In session / What it looks like'
-       aligns with the rest of the page text & the logo top-left -->
+<!-- Tighter top padding so the section doesn't feel too far from the conditions grid above -->
+<section style="padding-top: clamp(40px, 5vw, 70px); padding-bottom: clamp(50px, 7vw, 90px);">
   <div class="container">
     <div class="brand-gallery-head">
       <div>
@@ -265,10 +264,9 @@
         <p>Therapeutic light panels deliver precise wavelengths under a clinical protocol &mdash; not the LED panels you&rsquo;ll find online. Sessions are painless, quiet, and typically 15&ndash;20 minutes.</p>
       </div>
     </div>
-  </div>
-  <!-- Gallery photos stay in the wider wrap so the images still feel big -->
-  <div class="brand-gallery-wrap" style="margin-top: 38px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+    <!-- Gallery sits inside the same .container so the photos have the same
+         left/right gutter as the header above — no edge-to-edge bleed. -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 28px;">
       <div style="background-image: url('../images/services/lllt-session.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
       <div style="background-image: url('../images/services/lllt-equipment-2.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
       <div style="background-image: url('../images/services/lllt-detail.webp'); background-size: cover; background-position: center; aspect-ratio: 3/4; border-radius: 18px;"></div>
