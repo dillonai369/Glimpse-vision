@@ -10,3 +10,8 @@
 # Local backups
 **/originals/
 .vercel
+
+# Secrets — never commit API keys
+**/.env
+**/.env.local
+**/scripts/.env*
