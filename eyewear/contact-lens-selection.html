@@ -223,7 +223,111 @@
   </div>
 </section>
 
-<section class="bg-card" style="border-top: 1px solid var(--line);">
+<!-- ====== SPECIALTY CONTACTS — branded showcase for hard-to-fit eyes ====== -->
+<section class="bg-card" style="border-top: 1px solid var(--line); padding: clamp(80px, 10vw, 140px) 0;">
+  <div class="container">
+    <div style="text-align: center; max-width: 64ch; margin: 0 auto 56px;">
+      <span class="eyebrow" style="color: var(--gold);">Specialty Lenses We Fit</span>
+      <div style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px auto 0;"></div>
+      <h2 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.2rem, 3.6vw, 3.4rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">Built for the eyes other<br>opticians turn away.</h2>
+      <p style="color: var(--ink-soft); line-height: 1.65; margin-top: 18px; font-size: 1.02rem;">Keratoconus, post-surgical irregularities, high astigmatism, severe dry eye, presbyopia &mdash; the specialty lenses below are the ones we reach for when a standard daily isn&rsquo;t enough.</p>
+    </div>
+    <div class="specialty-cl-grid">
+      <figure class="specialty-cl-card">
+        <div class="specialty-cl-photo" style="background-image: url('../images/services/specialty-cl-altius.webp');"></div>
+        <figcaption>
+          <span class="eyebrow" style="color: var(--gold);">Scleral &middot; Made-to-order</span>
+          <h3>Altius Scleral</h3>
+          <p>Large-diameter rigid lens that vaults the cornea and rests on the sclera. Built for keratoconus, post-LASIK irregularities, and patients who can&rsquo;t comfortably wear soft lenses.</p>
+        </figcaption>
+      </figure>
+      <figure class="specialty-cl-card">
+        <div class="specialty-cl-photo" style="background-image: url('../images/services/specialty-cl-synergeye.webp');"></div>
+        <figcaption>
+          <span class="eyebrow" style="color: var(--gold);">Hybrid</span>
+          <h3>SynergEyes Duette</h3>
+          <p>Rigid optical center bonded to a soft hydrogel skirt &mdash; the crispness of an RGP with the comfort of a soft lens. Strong fit for active patients and high astigmatism.</p>
+        </figcaption>
+      </figure>
+      <figure class="specialty-cl-card">
+        <div class="specialty-cl-photo" style="background-image: url('../images/services/specialty-cl-intelliwave.webp');"></div>
+        <figcaption>
+          <span class="eyebrow" style="color: var(--gold);">RGP &middot; Wavefront-guided</span>
+          <h3>ArtOptical IntelliWave</h3>
+          <p>Wavefront-guided rigid gas permeable lens designed with topography-driven optics. Reduces higher-order aberrations &mdash; ideal for keratoconus and post-corneal-graft patients.</p>
+        </figcaption>
+      </figure>
+      <figure class="specialty-cl-card">
+        <div class="specialty-cl-photo" style="background-image: url('../images/services/specialty-cl-naturalvue-mf.webp');"></div>
+        <figcaption>
+          <span class="eyebrow" style="color: var(--gold);">Multifocal &middot; Daily</span>
+          <h3>NaturalVue Multifocal</h3>
+          <p>Center-distance daily disposable with neurofocus-optics design. Smoother distance-to-near transitions for presbyopes who&rsquo;ve struggled with traditional multifocals.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div style="text-align: center; margin-top: 56px;">
+      <a class="btn btn-primary" href="../services/fittings-training.html">Book a specialty fitting &rarr;</a>
+    </div>
+  </div>
+</section>
+<style>
+  .specialty-cl-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+  }
+  .specialty-cl-card {
+    margin: 0;
+    background: var(--bg);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+  }
+  .specialty-cl-photo {
+    aspect-ratio: 1/1;
+    background-color: var(--cream-dk);
+    background-size: cover;
+    background-position: center;
+  }
+  .specialty-cl-card figcaption {
+    padding: 24px 22px 26px;
+  }
+  .specialty-cl-card figcaption .eyebrow {
+    font-size: 0.7rem;
+  }
+  .specialty-cl-card figcaption h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 8px 0 10px;
+  }
+  .specialty-cl-card figcaption p {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+  @media (max-width: 980px) {
+    .specialty-cl-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+  }
+  @media (max-width: 560px) {
+    .specialty-cl-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+<section>
   <div class="container">
     <div class="split">
       <div>
