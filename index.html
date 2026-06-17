@@ -379,89 +379,75 @@
 <section class="bg-card" style="border-top: 1px solid var(--line); padding: clamp(90px, 11vw, 150px) 0;">
   <div class="container">
 
-    <!-- A. Editorial intro -->
-    <div style="max-width: 64ch; margin: 0 0 64px;">
-      <span class="eyebrow reveal" style="color: var(--gold);">The Integrative Difference</span>
-      <div class="reveal" style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px 0 0;"></div>
-      <h2 class="reveal" style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.4rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">Eye care that focuses<br>on the whole&nbsp;person.</h2>
-      <p class="lead reveal" style="margin-top: 22px; max-width: 60ch;">Three optometrists. Five opticians. A century-plus of combined experience and an integrative approach to clinical care &mdash; nutrition, ocular health, lifestyle, dry eye, sleep, screen habits. The reviews you read about Glimpse are about these eight people.</p>
-    </div>
-
-    <!-- B. Team horizontal scroller -->
-    <div class="team-scroll-head">
+    <!-- A. Editorial split — intro left, single team portrait right with dot nav -->
+    <div class="split team-spotlight-split">
       <div>
-        <span class="eyebrow">Meet the people</span>
-        <h3 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(1.6rem, 2.4vw, 2.2rem); line-height: 1.2; color: var(--ink); margin-top: 4px;">The team behind every exam.</h3>
+        <span class="eyebrow reveal" style="color: var(--gold);">The Integrative Difference</span>
+        <div class="reveal" style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px 0 0;"></div>
+        <h2 class="reveal" style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.4rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">Eye care that focuses<br>on the whole&nbsp;person.</h2>
+        <p class="lead reveal" style="margin-top: 22px;">Three optometrists. Five opticians. A century-plus of combined experience and an integrative approach to clinical care &mdash; nutrition, ocular health, lifestyle, dry eye, sleep, screen habits. The reviews you read about Glimpse are about these eight people.</p>
+        <a class="link-arrow reveal" href="experts/index.html" style="margin-top: 24px;">Explore the whole team &rarr;</a>
       </div>
-      <a class="link-arrow team-scroll-cta" href="experts/index.html">Explore the whole team &rarr;</a>
+
+      <div class="team-spotlight" data-anim="rise">
+        <a id="teamSpotlightLink" class="team-spotlight-link" href="experts/dr-carrie.html">
+          <div id="teamSpotlightPhoto" class="team-spotlight-photo" style="background-image: url('images/team/dr-carrie.webp');"></div>
+          <div class="team-spotlight-caption">
+            <span id="teamSpotlightRole" class="eyebrow">Partner &amp; Optometrist</span>
+            <h3 id="teamSpotlightName">Dr. Carrie Roitstein</h3>
+          </div>
+        </a>
+        <div id="teamSpotlightDots" class="team-spotlight-dots" role="tablist" aria-label="Featured team member">
+          <button class="active" data-i="0" aria-label="Dr. Carrie Roitstein"></button>
+          <button data-i="1" aria-label="Dr. Janette Perez"></button>
+          <button data-i="2" aria-label="Jeanine Lundstrom"></button>
+          <button data-i="3" aria-label="Dory Kenna"></button>
+          <button data-i="4" aria-label="Boyce Moffitt"></button>
+          <button data-i="5" aria-label="Lesley Bramson"></button>
+        </div>
+      </div>
     </div>
 
-    <div class="team-scroll" data-count="8">
-      <a class="team-card" href="experts/dr-carrie.html">
-        <div class="team-photo" data-tone="deep" style="background-image: url('images/team/dr-carrie.webp');"></div>
-        <div class="team-meta">
-          <span class="eyebrow">Partner &amp; OD</span>
-          <h4>Dr. Carrie Roitstein</h4>
-          <p>Clinical director. Integrative nutrition.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/dr-janette.html">
-        <div class="team-photo" data-tone="warm" style="background-image: url('images/team/dr-janette.webp');"></div>
-        <div class="team-meta">
-          <span class="eyebrow">Optometrist</span>
-          <h4>Dr. Janette Perez</h4>
-          <p>Comprehensive exams. Contact-lens fits.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/dr-jeanine.html">
-        <div class="team-photo" data-tone="ink" style="background-image: url('https://hiltonheadeyecare.com/wp-content/uploads/2024/05/jeanine-lundstrom-0524.jpg');"></div>
-        <div class="team-meta">
-          <span class="eyebrow">Founder</span>
-          <h4>Jeanine Lundstrom</h4>
-          <p>Founder. The original Glimpse vision.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/dory.html">
-        <div class="team-photo" data-tone="ivory" style="background-image: url('images/team/dory.webp');"></div>
-        <div class="team-meta">
-          <span class="eyebrow">Dispensing Optician</span>
-          <h4>Dory Kenna</h4>
-          <p>Hinsdale anchor. Frame whisperer.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/boyce.html">
-        <div class="team-photo" data-tone="gold" style="background-image: url('images/team/boyce.webp');"></div>
-        <div class="team-meta">
-          <span class="eyebrow">ABO Optician</span>
-          <h4>Boyce Moffitt</h4>
-          <p>Repair specialist. Difficult-fit expert.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/lesley.html">
-        <div class="team-photo" data-tone="rose" style="background-image: url('images/team/lesley.webp');"></div>
-        <div class="team-meta">
-          <span class="eyebrow">ABO Optician</span>
-          <h4>Lesley Bramson</h4>
-          <p>Twenty-plus years on the Gold Coast floor.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/patty.html">
-        <div class="team-photo team-photo-placeholder" data-tone="rust"><span>P</span></div>
-        <div class="team-meta">
-          <span class="eyebrow">Optician</span>
-          <h4>Patty Nogay</h4>
-          <p>Style-led. Color-confident.</p>
-        </div>
-      </a>
-      <a class="team-card" href="experts/jackie.html">
-        <div class="team-photo team-photo-placeholder" data-tone="sage"><span>J</span></div>
-        <div class="team-meta">
-          <span class="eyebrow">Optician</span>
-          <h4>Jackie</h4>
-          <p>Newest member of the Glimpse team.</p>
-        </div>
-      </a>
-    </div>
+    <script>
+      (function() {
+        const TEAM = [
+          { name: "Dr. Carrie Roitstein", role: "Partner &amp; Optometrist", photo: "images/team/dr-carrie.webp", href: "experts/dr-carrie.html" },
+          { name: "Dr. Janette Perez",   role: "Optometrist",               photo: "images/team/dr-janette.webp", href: "experts/dr-janette.html" },
+          { name: "Jeanine Lundstrom",   role: "Founder",                   photo: "https://hiltonheadeyecare.com/wp-content/uploads/2024/05/jeanine-lundstrom-0524.jpg", href: "experts/dr-jeanine.html" },
+          { name: "Dory Kenna",          role: "Dispensing Optician",       photo: "images/team/dory.webp", href: "experts/dory.html" },
+          { name: "Boyce Moffitt",       role: "ABO-Certified Optician",    photo: "images/team/boyce.webp", href: "experts/boyce.html" },
+          { name: "Lesley Bramson",      role: "ABO-Certified Optician",    photo: "images/team/lesley.webp", href: "experts/lesley.html" }
+        ];
+        const photo = document.getElementById('teamSpotlightPhoto');
+        const name  = document.getElementById('teamSpotlightName');
+        const role  = document.getElementById('teamSpotlightRole');
+        const link  = document.getElementById('teamSpotlightLink');
+        const dots  = document.querySelectorAll('#teamSpotlightDots button');
+
+        function show(i) {
+          const m = TEAM[i];
+          if (!m) return;
+          photo.style.backgroundImage = "url('" + m.photo + "')";
+          name.textContent = m.name;
+          role.innerHTML   = m.role;
+          link.setAttribute('href', m.href);
+          dots.forEach(d => d.classList.toggle('active', Number(d.dataset.i) === i));
+        }
+
+        dots.forEach(d => d.addEventListener('click', () => show(Number(d.dataset.i))));
+
+        // Auto-advance every 5s, pause on hover
+        let idx = 0;
+        let timer = setInterval(() => { idx = (idx + 1) % TEAM.length; show(idx); }, 5000);
+        const spotlight = document.querySelector('.team-spotlight');
+        spotlight.addEventListener('mouseenter', () => clearInterval(timer));
+        spotlight.addEventListener('mouseleave', () => {
+          timer = setInterval(() => { idx = (idx + 1) % TEAM.length; show(idx); }, 5000);
+        });
+        // Sync idx when user clicks a dot
+        dots.forEach(d => d.addEventListener('click', () => { idx = Number(d.dataset.i); }));
+      })();
+    </script>
 
     <!-- C. Reviews band -->
     <div style="margin-top: clamp(80px, 9vw, 130px);">
@@ -502,103 +488,74 @@
 </section>
 
 <style>
-  /* Team scroller header — title left, CTA right, wraps on mobile */
-  .team-scroll-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 24px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
-  }
-  .team-scroll-cta {
-    color: var(--ink);
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  /* Horizontal scrolling team carousel */
-  .team-scroll {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(240px, 1fr);
-    gap: 22px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 0;
-    padding: 4px 4px 18px;
-    margin: 0 -4px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .team-scroll::-webkit-scrollbar { display: none; }
-  .team-card {
-    text-decoration: none;
-    color: inherit;
-    background: var(--bg);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    overflow: hidden;
-    scroll-snap-align: start;
+  /* Single-portrait team spotlight (right column of split) */
+  .team-spotlight-split { align-items: start; }
+  .team-spotlight {
     display: flex;
     flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    gap: 22px;
   }
-  .team-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 50px rgba(28,28,26,0.08);
-    border-color: rgba(155, 122, 70, 0.3);
+  .team-spotlight-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   }
-  .team-photo {
-    aspect-ratio: 1/1;
+  .team-spotlight-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 24px 60px rgba(28,28,26,0.10);
+    border-color: rgba(155, 122, 70, 0.35);
+  }
+  .team-spotlight-photo {
+    aspect-ratio: 3/4;
     background-color: var(--cream-dk);
     background-size: cover;
     background-position: center top;
+    transition: background-image 0.4s ease;
   }
-  .team-photo-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--cream-dk) 0%, var(--bg) 100%);
+  .team-spotlight-caption {
+    padding: 22px 26px 26px;
   }
-  .team-photo-placeholder span {
-    font-family: var(--display);
-    font-style: italic;
-    font-weight: 400;
-    font-size: clamp(4rem, 8vw, 6rem);
+  .team-spotlight-caption .eyebrow {
     color: var(--gold);
-    opacity: 0.6;
+    font-size: 0.72rem;
   }
-  .team-meta {
-    padding: 20px 22px 24px;
-  }
-  .team-meta .eyebrow {
-    font-size: 0.68rem;
-    color: var(--gold);
-  }
-  .team-meta h4 {
+  .team-spotlight-caption h3 {
     font-family: var(--display);
     font-weight: 400;
     font-style: italic;
-    font-size: 1.3rem;
-    line-height: 1.2;
+    font-size: clamp(1.5rem, 2.1vw, 1.9rem);
+    line-height: 1.15;
     color: var(--ink);
-    margin: 8px 0 8px;
+    margin: 8px 0 0;
   }
-  .team-meta p {
-    color: var(--ink-soft);
-    font-size: 0.88rem;
-    line-height: 1.5;
-    margin: 0;
+  .team-spotlight-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 4px;
   }
-  @media (min-width: 1100px) {
-    .team-scroll {
-      grid-auto-columns: minmax(220px, 1fr);
-    }
+  .team-spotlight-dots button {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid var(--ink-soft);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   }
-  @media (max-width: 820px) {
-    .team-scroll {
-      grid-auto-columns: 70%;
-    }
+  .team-spotlight-dots button:hover {
+    border-color: var(--gold);
+    transform: scale(1.15);
+  }
+  .team-spotlight-dots button.active {
+    background: var(--gold);
+    border-color: var(--gold);
   }
 
   /* Reviews block */
