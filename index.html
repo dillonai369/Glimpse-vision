@@ -379,44 +379,44 @@
 <section class="bg-card" style="border-top: 1px solid var(--line); padding: clamp(90px, 11vw, 150px) 0;">
   <div class="container">
 
-    <!-- A. Editorial split — intro left, single team portrait right with dot nav -->
+    <!-- A. Editorial split — photo LEFT, text RIGHT (original layout, restored) -->
     <div class="split team-spotlight-split">
-      <div>
-        <span class="eyebrow reveal" style="color: var(--gold);">The Integrative Difference</span>
-        <div class="reveal" style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px 0 0;"></div>
-        <h2 class="reveal" style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.4rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">Eye care that focuses<br>on the whole&nbsp;person.</h2>
-        <p class="lead reveal" style="margin-top: 22px;">Three optometrists. Five opticians. A century-plus of combined experience and an integrative approach to clinical care &mdash; nutrition, ocular health, lifestyle, dry eye, sleep, screen habits. The reviews you read about Glimpse are about these eight people.</p>
-        <a class="link-arrow reveal" href="experts/index.html" style="margin-top: 24px;">Explore the whole team &rarr;</a>
-      </div>
-
+      <!-- LEFT: photo + caption + dots -->
       <div class="team-spotlight" data-anim="rise">
-        <a id="teamSpotlightLink" class="team-spotlight-link" href="experts/dr-carrie.html">
-          <div id="teamSpotlightPhoto" class="team-spotlight-photo" style="background-image: url('images/team/dr-carrie.webp');"></div>
-          <div class="team-spotlight-caption">
-            <span id="teamSpotlightRole" class="eyebrow">Partner &amp; Optometrist</span>
-            <h3 id="teamSpotlightName">Dr. Carrie Roitstein</h3>
-          </div>
+        <a id="teamSpotlightLink" class="team-spotlight-link" href="experts/dr-carrie.html" aria-label="Read about Dr. Carrie Roitstein">
+          <div id="teamSpotlightPhoto" class="team-spotlight-photo" style="background-image: url('images/hero/integrative.webp?v=3');"></div>
         </a>
+        <div class="team-spotlight-caption">
+          <span id="teamSpotlightName">Dr. Carrie Roitstein</span>
+          <span class="team-spotlight-sep">&middot;</span>
+          <span id="teamSpotlightRole">Partner &amp; Optometrist</span>
+        </div>
         <div id="teamSpotlightDots" class="team-spotlight-dots" role="tablist" aria-label="Featured team member">
           <button class="active" data-i="0" aria-label="Dr. Carrie Roitstein"></button>
           <button data-i="1" aria-label="Dr. Janette Perez"></button>
           <button data-i="2" aria-label="Jeanine Lundstrom"></button>
           <button data-i="3" aria-label="Dory Kenna"></button>
           <button data-i="4" aria-label="Boyce Moffitt"></button>
-          <button data-i="5" aria-label="Lesley Bramson"></button>
         </div>
+      </div>
+      <!-- RIGHT: editorial intro -->
+      <div>
+        <span class="eyebrow reveal" style="color: var(--gold);">The Integrative Difference</span>
+        <div class="reveal" style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px 0 0;"></div>
+        <h2 class="reveal" style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2.4rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">Eye care that focuses<br>on the whole&nbsp;person.</h2>
+        <p class="lead reveal" style="margin-top: 22px;">Three optometrists. Five opticians. A century-plus of combined experience and an integrative approach to clinical care &mdash; nutrition, ocular health, lifestyle, dry eye, sleep, screen habits. The reviews you read about Glimpse are about these eight people.</p>
+        <a class="btn btn-outline reveal" href="experts/index.html" style="margin-top: 28px;">Meet the whole team &rarr;</a>
       </div>
     </div>
 
     <script>
       (function() {
         const TEAM = [
-          { name: "Dr. Carrie Roitstein", role: "Partner &amp; Optometrist", photo: "images/team/dr-carrie.webp", href: "experts/dr-carrie.html" },
+          { name: "Dr. Carrie Roitstein", role: "Partner &amp; Optometrist", photo: "images/hero/integrative.webp?v=3", href: "experts/dr-carrie.html" },
           { name: "Dr. Janette Perez",   role: "Optometrist",               photo: "images/team/dr-janette.webp", href: "experts/dr-janette.html" },
           { name: "Jeanine Lundstrom",   role: "Founder",                   photo: "https://hiltonheadeyecare.com/wp-content/uploads/2024/05/jeanine-lundstrom-0524.jpg", href: "experts/dr-jeanine.html" },
           { name: "Dory Kenna",          role: "Dispensing Optician",       photo: "images/team/dory.webp", href: "experts/dory.html" },
-          { name: "Boyce Moffitt",       role: "ABO-Certified Optician",    photo: "images/team/boyce.webp", href: "experts/boyce.html" },
-          { name: "Lesley Bramson",      role: "ABO-Certified Optician",    photo: "images/team/lesley.webp", href: "experts/lesley.html" }
+          { name: "Boyce Moffitt",       role: "ABO-Certified Optician",    photo: "images/team/boyce.webp", href: "experts/boyce.html" }
         ];
         const photo = document.getElementById('teamSpotlightPhoto');
         const name  = document.getElementById('teamSpotlightName');
@@ -431,21 +431,20 @@
           name.textContent = m.name;
           role.innerHTML   = m.role;
           link.setAttribute('href', m.href);
+          link.setAttribute('aria-label', 'Read about ' + m.name);
           dots.forEach(d => d.classList.toggle('active', Number(d.dataset.i) === i));
         }
 
-        dots.forEach(d => d.addEventListener('click', () => show(Number(d.dataset.i))));
-
-        // Auto-advance every 5s, pause on hover
         let idx = 0;
-        let timer = setInterval(() => { idx = (idx + 1) % TEAM.length; show(idx); }, 5000);
+        dots.forEach(d => d.addEventListener('click', () => { idx = Number(d.dataset.i); show(idx); }));
+
+        // Auto-advance every 6s, pause on hover
+        let timer = setInterval(() => { idx = (idx + 1) % TEAM.length; show(idx); }, 6000);
         const spotlight = document.querySelector('.team-spotlight');
         spotlight.addEventListener('mouseenter', () => clearInterval(timer));
         spotlight.addEventListener('mouseleave', () => {
-          timer = setInterval(() => { idx = (idx + 1) % TEAM.length; show(idx); }, 5000);
+          timer = setInterval(() => { idx = (idx + 1) % TEAM.length; show(idx); }, 6000);
         });
-        // Sync idx when user clicks a dot
-        dots.forEach(d => d.addEventListener('click', () => { idx = Number(d.dataset.i); }));
       })();
     </script>
 
@@ -488,56 +487,53 @@
 </section>
 
 <style>
-  /* Single-portrait team spotlight (right column of split) */
-  .team-spotlight-split { align-items: start; }
+  /* Team spotlight — photo LEFT, text RIGHT (mirrors original integrative split) */
+  .team-spotlight-split { align-items: center; }
   .team-spotlight {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 18px;
+    max-width: 440px;        /* keep the portrait modestly sized */
+    width: 100%;
   }
   .team-spotlight-link {
-    text-decoration: none;
-    color: inherit;
     display: block;
     border-radius: 20px;
     overflow: hidden;
-    background: var(--bg);
-    border: 1px solid var(--line);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-  .team-spotlight-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 24px 60px rgba(28,28,26,0.10);
-    border-color: rgba(155, 122, 70, 0.35);
+    text-decoration: none;
   }
   .team-spotlight-photo {
     aspect-ratio: 3/4;
     background-color: var(--cream-dk);
     background-size: cover;
     background-position: center top;
-    transition: background-image 0.4s ease;
+    border-radius: 20px;
+    transition: background-image 0.4s ease, transform 0.3s ease;
+  }
+  .team-spotlight-link:hover .team-spotlight-photo {
+    transform: translateY(-2px);
   }
   .team-spotlight-caption {
-    padding: 22px 26px 26px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding: 2px 0 0;
   }
-  .team-spotlight-caption .eyebrow {
-    color: var(--gold);
-    font-size: 0.72rem;
-  }
-  .team-spotlight-caption h3 {
-    font-family: var(--display);
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(1.5rem, 2.1vw, 1.9rem);
-    line-height: 1.15;
+  .team-spotlight-caption #teamSpotlightName {
     color: var(--ink);
-    margin: 8px 0 0;
+    font-weight: 500;
+  }
+  .team-spotlight-sep {
+    margin: 0 8px;
+    color: var(--gold);
+    opacity: 0.7;
   }
   .team-spotlight-dots {
     display: flex;
     justify-content: center;
     gap: 12px;
-    padding-top: 4px;
+    padding-top: 2px;
   }
   .team-spotlight-dots button {
     width: 9px;
@@ -556,6 +552,12 @@
   .team-spotlight-dots button.active {
     background: var(--gold);
     border-color: var(--gold);
+  }
+  @media (max-width: 820px) {
+    .team-spotlight {
+      max-width: 360px;
+      margin: 0 auto;
+    }
   }
 
   /* Reviews block */
