@@ -384,8 +384,8 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   opacity: 0;
   pointer-events: none;
   transform: translateX(-8px);
-  /* Slow close (250ms delay), instant open — gives time to travel to submenu */
-  transition: opacity 180ms var(--ease) 250ms, transform 260ms var(--ease) 250ms;
+  /* Slow close (500ms delay), instant open — long delay so mouse can travel */
+  transition: opacity 200ms var(--ease) 500ms, transform 280ms var(--ease) 500ms;
   box-shadow:
     0 4px 12px -4px rgba(20,19,15,0.10),
     0 24px 60px -12px rgba(20,19,15,0.22);
@@ -393,16 +393,24 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   max-height: 72vh;
   overflow-y: auto;
 }
-/* Invisible hover-bridge that fills the 8px gap between parent item and submenu —
-   lets the mouse travel diagonally without losing the hover state. */
-.nav-submenu::before {
+/* Bulletproof hover-bridge: an invisible block CHILD of the parent li that
+   spans the gap between li's right edge and the submenu's left edge. Because
+   it's a child of li.has-submenu, hovering it keeps li:hover true, which keeps
+   the submenu open. */
+.nav-dropdown li.has-submenu::after {
   content: '';
   position: absolute;
-  left: -18px;
-  top: 0;
-  bottom: 0;
-  width: 22px;
+  top: -10px;
+  left: 100%;
+  width: 24px;            /* covers the 8px gap + extra slack */
+  height: calc(100% + 20px);
   background: transparent;
+  display: none;
+  z-index: 52;
+}
+.nav-dropdown li.has-submenu:hover::after,
+.nav-dropdown li.has-submenu:focus-within::after {
+  display: block;
 }
 .nav-dropdown li:hover > .nav-submenu,
 .nav-dropdown li:focus-within > .nav-submenu {
@@ -411,10 +419,9 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   transform: translateX(0);
   transition-delay: 0ms;   /* instant open, override the close delay above */
 }
-/* Also add a forgiving close delay to the Level 1 dropdown so the whole
-   menu doesn't disappear if the mouse briefly slips off the parent. */
+/* Forgiving close delay on the Level 1 dropdown too. */
 .nav-dropdown {
-  transition: opacity 180ms var(--ease) 200ms, transform 260ms var(--ease) 200ms;
+  transition: opacity 200ms var(--ease) 400ms, transform 280ms var(--ease) 400ms;
 }
 .nav-primary > li:hover > .nav-dropdown,
 .nav-primary > li:focus-within > .nav-dropdown {
