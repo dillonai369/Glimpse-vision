@@ -384,7 +384,8 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   opacity: 0;
   pointer-events: none;
   transform: translateX(-8px);
-  transition: opacity 200ms var(--ease), transform 260ms var(--ease);
+  /* Slow close (250ms delay), instant open — gives time to travel to submenu */
+  transition: opacity 180ms var(--ease) 250ms, transform 260ms var(--ease) 250ms;
   box-shadow:
     0 4px 12px -4px rgba(20,19,15,0.10),
     0 24px 60px -12px rgba(20,19,15,0.22);
@@ -392,11 +393,32 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   max-height: 72vh;
   overflow-y: auto;
 }
+/* Invisible hover-bridge that fills the 8px gap between parent item and submenu —
+   lets the mouse travel diagonally without losing the hover state. */
+.nav-submenu::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  background: transparent;
+}
 .nav-dropdown li:hover > .nav-submenu,
 .nav-dropdown li:focus-within > .nav-submenu {
   opacity: 1;
   pointer-events: auto;
   transform: translateX(0);
+  transition-delay: 0ms;   /* instant open, override the close delay above */
+}
+/* Also add a forgiving close delay to the Level 1 dropdown so the whole
+   menu doesn't disappear if the mouse briefly slips off the parent. */
+.nav-dropdown {
+  transition: opacity 180ms var(--ease) 200ms, transform 260ms var(--ease) 200ms;
+}
+.nav-primary > li:hover > .nav-dropdown,
+.nav-primary > li:focus-within > .nav-dropdown {
+  transition-delay: 0ms;
 }
 /* Scrollbar styling inside submenu */
 .nav-submenu::-webkit-scrollbar { width: 6px; }
