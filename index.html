@@ -982,11 +982,11 @@
 </section>
 
 <style>
-  /* Product collage — every brand, frames only. Clean magazine grid of 14. */
+  /* Product collage — every brand, frames only. Bigger tiles, magazine grid of 14. */
   .product-collage {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: clamp(8px, 0.9vw, 14px);
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(12px, 1.4vw, 22px);
   }
   .product-cell {
     display: block;
@@ -994,15 +994,15 @@
     background-size: cover;
     background-position: center;
     background-color: rgba(245,241,234,0.04);
-    border-radius: 14px;
+    border-radius: 18px;
     overflow: hidden;
     position: relative;
     transition: transform 480ms var(--ease), filter 480ms var(--ease);
-    filter: brightness(0.96);
+    filter: brightness(0.98);
   }
   .product-cell:hover {
-    transform: translateY(-3px) scale(1.02);
-    filter: brightness(1.05);
+    transform: translateY(-4px) scale(1.025);
+    filter: brightness(1.06);
     z-index: 2;
   }
   .product-cell::after {
@@ -1016,7 +1016,7 @@
   .product-cell:hover::after { opacity: 0.5; }
 
   @media (max-width: 1080px) {
-    .product-collage { grid-template-columns: repeat(5, 1fr); }
+    .product-collage { grid-template-columns: repeat(4, 1fr); }
   }
   @media (max-width: 760px) {
     .product-collage { grid-template-columns: repeat(3, 1fr); }
