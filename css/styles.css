@@ -2067,7 +2067,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   position: relative;
   width: 100%;
   min-height: clamp(420px, 56vw, 620px);
-  background-image: url('../images/hero/order-hero.webp'), url('../images/hero/order.webp');
+  background-image: url('../images/hero/order-hero.webp?v=2'), url('../images/hero/order.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
