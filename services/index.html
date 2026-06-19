@@ -200,36 +200,44 @@
 
 <section>
   <div class="container">
-    <div class="grid-3">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;" class="services-grid-4">
       <a class="card" href="integrative-eye-exams.html" style="text-decoration: none;">
-        <div class="card-image" data-tone="deep"></div>
+        <div class="card-image" data-tone="deep" style="background-image: url('../images/services/integrative-hero.webp?v=3'); background-size: cover; background-position: center;"></div>
         <span class="eyebrow">Service Area</span>
         <h3>Integrative Eye Exams</h3>
-        <p>Comprehensive, pediatric, and dry eye evaluations. Integrated wellness care.</p>
+        <p>Comprehensive, pediatric, and dry eye evaluations &mdash; whole-person care.</p>
         <span class="link-arrow">Read &rarr;</span>
       </a>
       <a class="card" href="wellness.html" style="text-decoration: none;">
-        <div class="card-image" data-tone="warm"></div>
+        <div class="card-image" data-tone="warm" style="background-image: url('../images/services/dry-eye-hero.webp?v=3'); background-size: cover; background-position: center;"></div>
         <span class="eyebrow">Service Area</span>
         <h3>Wellness</h3>
-        <p>Natural and non-toxic treatment options including nutrition, supplementation, and dry-eye products.</p>
+        <p>Nutrition, supplementation, and dry-eye products. Natural and non-toxic.</p>
         <span class="link-arrow">Read &rarr;</span>
       </a>
       <a class="card" href="contact-lenses.html" style="text-decoration: none;">
-        <div class="card-image" data-tone="sage"></div>
+        <div class="card-image" data-tone="sage" style="background-image: url('../images/services/contact-lens-hero.webp?v=3'); background-size: cover; background-position: center;"></div>
         <span class="eyebrow">Service Area</span>
         <h3>Contact Lens Services</h3>
-        <p>Fittings, training, lens care guidance, and myopia control options for every wearer.</p>
+        <p>Fittings, training, lens care, and myopia control for every wearer.</p>
         <span class="link-arrow">Read &rarr;</span>
       </a>
       <a class="card" href="low-light-therapy.html" style="text-decoration: none;">
-        <div class="card-image" data-tone="rust"></div>
+        <div class="card-image" data-tone="rust" style="background-image: url('../images/services/lllt-hero.webp'); background-size: cover; background-position: center;"></div>
         <span class="eyebrow">Service Area</span>
         <h3>Low Light Therapy</h3>
-        <p>FDA-authorized photobiomodulation (PBM) for dry AMD, plus emerging protocols for dry eye and pediatric myopia.</p>
+        <p>FDA-authorized photobiomodulation (PBM) for dry AMD and emerging dry-eye protocols.</p>
         <span class="link-arrow">Read &rarr;</span>
       </a>
     </div>
+    <style>
+      @media (max-width: 1080px) {
+        .services-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 640px) {
+        .services-grid-4 { grid-template-columns: 1fr !important; }
+      }
+    </style>
   </div>
 </section>
 <footer class="site-footer">
