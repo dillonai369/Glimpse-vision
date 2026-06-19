@@ -968,11 +968,13 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
 .card {
   background: var(--bg-card);
   border: 1px solid var(--line-soft);
+  border-radius: 18px;
   padding: clamp(24px, 3vw, 38px);
   transition: all var(--t-med) var(--ease);
   display: flex;
   flex-direction: column;
   gap: 14px;
+  overflow: hidden;
 }
 .card:hover {
   border-color: var(--ink);
@@ -985,6 +987,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
 
 .card-image {
   aspect-ratio: 4/3;
+  border-radius: 14px;
   background-image: linear-gradient(135deg, var(--line-soft), var(--line));
   background-size: cover;
   background-position: center;
