@@ -390,10 +390,17 @@
 
 <!-- ════════ INFINITE BRAND MARQUEE ════════ -->
 <section class="brand-marquee-section">
+  <div class="container">
+    <div class="brand-marquee-header">
+      <span class="eyebrow" style="color: var(--gold);">Now in our cases</span>
+      <h2 class="brand-marquee-headline">Every house,<br>scrolling by.</h2>
+      <p class="brand-marquee-sub">A snapshot of the floor &mdash; pause on what catches your eye.</p>
+    </div>
+  </div>
   <div class="brand-marquee" aria-label="All 14 brands">
     <div class="brand-marquee-track">
       <!-- Pass 1 -->
-      <a class="brand-marquee-card" href="/eyewear/lindberg"><div class="brand-marquee-photo" style="background-image: url('../images/brands/lindberg-2.webp');"></div><span class="brand-marquee-name">Lindberg</span></a>
+      <a class="brand-marquee-card" href="/eyewear/lindberg"><div class="brand-marquee-photo" style="background-image: url('../images/brands/lindberg-7.webp');"></div><span class="brand-marquee-name">Lindberg</span></a>
       <a class="brand-marquee-card" href="/eyewear/chanel"><div class="brand-marquee-photo" style="background-image: url('../images/brands/chanel-1.webp');"></div><span class="brand-marquee-name">Chanel</span></a>
       <a class="brand-marquee-card" href="/eyewear/tom-ford"><div class="brand-marquee-photo" style="background-image: url('../images/brands/tom-ford-1.webp');"></div><span class="brand-marquee-name">Tom Ford</span></a>
       <a class="brand-marquee-card" href="/eyewear/dita"><div class="brand-marquee-photo" style="background-image: url('../images/brands/dita-2.webp');"></div><span class="brand-marquee-name">Dita</span></a>
@@ -408,7 +415,7 @@
       <a class="brand-marquee-card" href="/eyewear/orgreen"><div class="brand-marquee-photo" style="background-image: url('../images/brands/orgreen-1.webp?v=2');"></div><span class="brand-marquee-name">Orgreen</span></a>
       <a class="brand-marquee-card" href="/eyewear/fhone"><div class="brand-marquee-photo" style="background-image: url('../images/brands/fhone-1.webp');"></div><span class="brand-marquee-name">FHone</span></a>
       <!-- Pass 2 (duplicate for seamless loop) -->
-      <a class="brand-marquee-card" href="/eyewear/lindberg" aria-hidden="true"><div class="brand-marquee-photo" style="background-image: url('../images/brands/lindberg-2.webp');"></div><span class="brand-marquee-name">Lindberg</span></a>
+      <a class="brand-marquee-card" href="/eyewear/lindberg" aria-hidden="true"><div class="brand-marquee-photo" style="background-image: url('../images/brands/lindberg-7.webp');"></div><span class="brand-marquee-name">Lindberg</span></a>
       <a class="brand-marquee-card" href="/eyewear/chanel" aria-hidden="true"><div class="brand-marquee-photo" style="background-image: url('../images/brands/chanel-1.webp');"></div><span class="brand-marquee-name">Chanel</span></a>
       <a class="brand-marquee-card" href="/eyewear/tom-ford" aria-hidden="true"><div class="brand-marquee-photo" style="background-image: url('../images/brands/tom-ford-1.webp');"></div><span class="brand-marquee-name">Tom Ford</span></a>
       <a class="brand-marquee-card" href="/eyewear/dita" aria-hidden="true"><div class="brand-marquee-photo" style="background-image: url('../images/brands/dita-2.webp');"></div><span class="brand-marquee-name">Dita</span></a>
@@ -576,10 +583,30 @@
 
   /* ════════ INFINITE BRAND MARQUEE ════════ */
   .brand-marquee-section {
-    background: #14100a;
+    background: var(--bg-deep);
     padding: clamp(80px, 10vw, 130px) 0;
     border-top: 1px solid rgba(245,241,234,0.06);
     overflow: hidden;
+  }
+  .brand-marquee-header {
+    text-align: center;
+    margin-bottom: clamp(46px, 6vw, 78px);
+  }
+  .brand-marquee-headline {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--bg);
+    margin: 16px 0 0;
+  }
+  .brand-marquee-sub {
+    color: rgba(245,241,234,0.65);
+    font-size: clamp(0.98rem, 1.2vw, 1.1rem);
+    line-height: 1.6;
+    margin: 18px auto 0;
+    max-width: 50ch;
   }
   .brand-marquee {
     width: 100%;
