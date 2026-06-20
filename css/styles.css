@@ -1779,6 +1779,39 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
 }
 
 /* ──────────────────────────────────────────────────────────────
+   Shared page-top hero band used by Contact Lens brand pages
+   (Biofinity/MyDay/Clariti/Dailies/Acuvue/MiSight) AND Integrative
+   exam pages (Comprehensive/Pediatric/Dry Eye Evals).
+   Desktop = wide landscape image; Mobile = portrait crop swap.
+   ────────────────────────────────────────────────────────────── */
+.shared-page-hero {
+  position: relative;
+  min-height: clamp(440px, 60vh, 640px);
+  background-image: url('../images/services/integrative-hero.webp?v=4');
+  background-size: cover;
+  background-position: center;
+}
+.shared-page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(28,28,26,0.62) 0%, rgba(28,28,26,0.35) 40%, rgba(28,28,26,0.80) 100%);
+  pointer-events: none;
+}
+.shared-page-hero-content {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 0 clamp(20px, 2.5vw, 36px) clamp(40px, 7vw, 90px);
+  color: var(--bg);
+  z-index: 2;
+}
+@media (max-width: 760px) {
+  .shared-page-hero {
+    background-image: url('../images/services/integrative-hero-mobile.webp?v=1');
+    min-height: clamp(420px, 75vh, 600px);
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
    Brand page "Why we carry" reasons grid — 3 cards in a row on desktop,
    stacked with proper border transitions on mobile
    ────────────────────────────────────────────────────────────── */
