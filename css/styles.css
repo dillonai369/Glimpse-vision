@@ -1292,7 +1292,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
 /* ---------- Brand Showcase (pinned horizontal scroll w/ marquee on top) ---------- */
 .showcase {
   position: relative;
-  background: #261812;          /* deep coffee brown — still very dark, warmer than near-black */
+  background: #150b06;          /* near-footer dark with coffee brown undertone */
   color: var(--bg);
   overflow: hidden;
   padding: 0;
@@ -1324,7 +1324,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid rgba(245,241,234,0.12);
-  background: #261812;          /* match showcase coffee-brown */
+  background: #150b06;          /* match showcase coffee-brown */
   position: relative;
   z-index: 2;
 }
@@ -1400,7 +1400,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   justify-content: space-between;
   position: relative;
   border-right: 1px solid rgba(245,241,234,0.08);
-  background: #261812;          /* match showcase coffee-brown */
+  background: #150b06;          /* match showcase coffee-brown */
   transition: background 480ms var(--ease);
   overflow: hidden;
   text-decoration: none;
@@ -1653,10 +1653,18 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   .team-spotlight-split {
     display: flex !important;
     flex-direction: column;
-    gap: 28px;
+    gap: 18px;   /* tighter — carousel sits closer to the intro text */
   }
   .team-spotlight-split > div:nth-child(2) { order: 1; }  /* text first */
   .team-spotlight-split > div:nth-child(1) { order: 2; }  /* carousel second */
+
+  /* Hide the desktop button on mobile; show the mobile CTA below the whole split */
+  .team-spotlight-cta-desktop { display: none !important; }
+  .team-spotlight-cta-mobile {
+    display: inline-flex !important;
+    margin: 22px auto 0;
+    width: max-content;
+  }
 
   /* Swipe hint label below the dots */
   .team-spotlight-swipe-hint {
@@ -1700,6 +1708,21 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   vertical-align: -0.18em;
   margin: 0 4px;
 }
+
+/* ──────────────────────────────────────────────────────────────
+   Review stars — brighter gold so they read clearly
+   ────────────────────────────────────────────────────────────── */
+.reviews-stars, .review-stars {
+  color: #d4a64a;
+  letter-spacing: 0.12em;
+  font-size: 1.05em;
+  text-shadow: 0 0 1px rgba(212, 166, 74, 0.25);
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Mobile-only "Meet the team" CTA — hidden on desktop, shown on mobile
+   ────────────────────────────────────────────────────────────── */
+.team-spotlight-cta-mobile { display: none; }
 
 /* ---------- Frame silhouette helpers ---------- */
 .frame-silhouette {
