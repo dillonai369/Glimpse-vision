@@ -1638,7 +1638,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
     margin-top: 32px;
     aspect-ratio: 2 / 1;
     border-radius: 10px;
-    background-image: url('../images/hero/showcase-mobile.webp');
+    background-image: url('../images/hero/showcase-mobile.webp?v=2');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1647,9 +1647,58 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
     box-shadow: 0 12px 30px -12px rgba(0,0,0,0.45);
   }
 
+  /* ──────────────────────────────────────────────────────────────
+     Team Spotlight: TEXT goes above the team carousel on mobile
+     ────────────────────────────────────────────────────────────── */
+  .team-spotlight-split {
+    display: flex !important;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .team-spotlight-split > div:nth-child(2) { order: 1; }  /* text first */
+  .team-spotlight-split > div:nth-child(1) { order: 2; }  /* carousel second */
+
+  /* Swipe hint label below the dots */
+  .team-spotlight-swipe-hint {
+    display: block !important;
+    text-align: center;
+    margin-top: 12px;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    opacity: 0.7;
+  }
+
+  /* Tighten the Reviews / Integrative section overall mobile padding */
+  section.bg-card { padding-top: clamp(50px, 8vw, 80px) !important; padding-bottom: clamp(50px, 8vw, 80px) !important; }
+  .reviews-head { margin-top: clamp(48px, 7vw, 80px) !important; }
+  .reviews-grid { gap: 18px !important; }
+  .review-card { padding: 22px !important; }
+
+  /* Reviews-rating row on mobile: stack nicely */
+  .reviews-rating { align-items: flex-start; }
+  .reviews-rating-meta { font-size: 0.88rem; }
+
   /* Editorial split sections — stack on mobile */
   .split { grid-template-columns: 1fr; gap: 32px; }
   .split.reverse > :first-child { order: 0; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Team Spotlight swipe hint — hidden on desktop, shown via media query above
+   ────────────────────────────────────────────────────────────── */
+.team-spotlight-swipe-hint { display: none; }
+
+/* ──────────────────────────────────────────────────────────────
+   Google G logo inline with rating meta
+   ────────────────────────────────────────────────────────────── */
+.reviews-google-g {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.18em;
+  margin: 0 4px;
 }
 
 /* ---------- Frame silhouette helpers ---------- */
