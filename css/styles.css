@@ -1811,6 +1811,21 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   }
 }
 
+/* Per-location hero variants — used on the experts hub + individual expert pages */
+.shared-page-hero.is-hinsdale {
+  background-image: url('../images/locations/hinsdale-storefront.webp?v=2');
+}
+.shared-page-hero.is-gold-coast {
+  background-image: url('../images/locations/gold-coast-storefront.webp?v=2');
+}
+@media (max-width: 760px) {
+  .shared-page-hero.is-hinsdale,
+  .shared-page-hero.is-gold-coast {
+    /* Keep the same wide photo on mobile too — these storefronts crop nicely */
+    background-position: center;
+  }
+}
+
 /* ──────────────────────────────────────────────────────────────
    Brand page "Why we carry" reasons grid — 3 cards in a row on desktop,
    stacked with proper border transitions on mobile
