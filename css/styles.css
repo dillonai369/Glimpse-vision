@@ -1640,7 +1640,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
 
   /* ════════ Mobile-only auto-scrolling face-photo brand marquee ════════ */
   .showcase-face-marquee {
-    display: block;
+    display: block !important;
     width: calc(100% + 56px);          /* break out of side-panel padding for full-bleed */
     margin: 36px -28px 8px;
     overflow: hidden;
