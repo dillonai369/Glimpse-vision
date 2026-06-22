@@ -1677,7 +1677,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
     display: flex;
     gap: 18px;
     width: max-content;
-    animation: sfm-scroll 55s linear infinite;
+    animation: sfm-scroll 35s linear infinite;
   }
   @keyframes sfm-scroll {
     from { transform: translateX(0); }
@@ -2491,4 +2491,27 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
     border-left: 0;
     border-right: 0;
   }
+}
+
+
+/* ---- TEST: manual horizontal scroll mode for brand showcase (reversible: remove the showcase--manual class to revert) ---- */
+@media (min-width: 821px) {
+  .showcase--manual { height: auto; min-height: 0; }
+  .showcase--manual .showcase-pin {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: clamp(460px, 66vh, 640px);
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--gold) rgba(245,241,234,0.10);
+    scrollbar-width: thin;
+    padding-bottom: 6px;
+  }
+  .showcase--manual .showcase-track { height: 100%; transform: none !important; }
+  .showcase--manual .showcase-panel,
+  .showcase--manual .showcase-side { scroll-snap-align: start; }
+  .showcase--manual .showcase-counter { display: none; }
+  .showcase--manual .showcase-pin::-webkit-scrollbar { height: 12px; }
+  .showcase--manual .showcase-pin::-webkit-scrollbar-track { background: rgba(245,241,234,0.10); border-radius: 999px; }
+  .showcase--manual .showcase-pin::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 999px; border: 3px solid #150b06; }
 }

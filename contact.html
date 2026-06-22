@@ -58,8 +58,8 @@
       },
       "telephone": "+1-312-943-2020",
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Thursday","Friday"], "opens": "10:00", "closes": "18:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Friday"], "opens": "10:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Thursday"], "opens": "10:00", "closes": "19:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "15:00" }
       ]
     },
@@ -76,8 +76,8 @@
       },
       "telephone": "+1-630-325-2020",
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "10:00", "closes": "18:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Friday"], "opens": "10:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday"], "opens": "10:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "17:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "11:00", "closes": "19:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
       ]
@@ -217,22 +217,86 @@
   <div>
     <span class="eyebrow">Send a Message</span>
     <h2 style="margin-bottom: 30px;">We'll be in touch.</h2>
-    <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <style>
+      .loc-choice { border: 0; padding: 0; margin: 0 0 4px; }
+      .loc-choice legend { font-size: 0.82rem; font-weight: 600; color: var(--ink-soft); margin-bottom: 10px; padding: 0; }
+      .loc-opts { display: flex; gap: 12px; flex-wrap: wrap; }
+      .loc-opts label { flex: 1 1 150px; display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; cursor: pointer; transition: border-color .15s ease, background .15s ease; }
+      .loc-opts label:hover { border-color: var(--ink-mute); }
+      .loc-opts input { accent-color: var(--gold); width: 18px; height: 18px; }
+      .loc-opts label:has(input:checked) { border-color: var(--gold); background: #fbf6ec; }
+      .loc-opts label:has(input:checked) span { font-weight: 600; }
+      #formStatus { font-size: 0.92rem; padding: 12px 14px; border-radius: 10px; display: none; margin-top: 4px; }
+      #formStatus.ok { display: block; background: #e9f6ee; color: #1c7a45; }
+      #formStatus.err { display: block; background: #fbeaea; color: #a23b3b; }
+    </style>
+    <form class="form" id="contactForm" method="POST">
+      <fieldset class="loc-choice">
+        <legend>Which location is this for?</legend>
+        <div class="loc-opts">
+          <label><input type="radio" name="location" value="Gold Coast" required><span>Gold Coast &middot; Chicago</span></label>
+          <label><input type="radio" name="location" value="Hinsdale"><span>Hinsdale</span></label>
+          <label><input type="radio" name="location" value="Either"><span>Not sure / Either</span></label>
+        </div>
+      </fieldset>
       <div class="form-row">
         <div><label for="name">Name</label><input type="text" id="name" name="name" required></div>
         <div><label for="email">Email</label><input type="email" id="email" name="email" required></div>
       </div>
       <div><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone"></div>
-      <div><label for="location">Preferred Location</label>
-        <select id="location" name="location"><option>Either &mdash; whichever is faster</option><option>Gold Coast (Chicago)</option><option>Hinsdale</option></select>
-      </div>
       <div><label for="topic">What can we help with?</label>
         <select id="topic" name="topic"><option>General question</option><option>Appointment / scheduling</option><option>Eyewear / frame question</option><option>Insurance / billing</option><option>Repair / adjustment</option><option>Other</option></select>
       </div>
       <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important;">
+      <div id="formStatus"></div>
       <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Send Message</button>
       <p style="color: var(--ink-mute); font-size: 0.82rem;">By submitting this form you agree to be contacted by Glimpse Vision in response to your inquiry.</p>
     </form>
+    <script>
+    (function () {
+      // Web3Forms access keys — each key is configured in the Web3Forms
+      // dashboard to deliver to the right inboxes:
+      //   Gold Coast key -> goldcoast@ + info@ (CC)
+      //   Hinsdale key   -> hinsdale@ + info@ (CC)
+      //   Either key     -> info@
+      var KEYS = {
+        "Gold Coast": "GOLDCOAST_ACCESS_KEY",
+        "Hinsdale":   "HINSDALE_ACCESS_KEY",
+        "Either":     "INFO_ACCESS_KEY"
+      };
+      var form = document.getElementById("contactForm");
+      var statusEl = document.getElementById("formStatus");
+      if (!form) return;
+      function setStatus(cls, msg) { statusEl.className = cls; statusEl.textContent = msg; }
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        var picked = form.querySelector('input[name="location"]:checked');
+        if (!picked) { setStatus("err", "Please choose a location above."); return; }
+        var key = KEYS[picked.value] || KEYS["Either"];
+        var data = new FormData(form);
+        data.append("access_key", key);
+        data.append("subject", "New Glimpse Vision inquiry — " + picked.value);
+        data.append("from_name", "Glimpse Vision Website");
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn.textContent;
+        btn.disabled = true; btn.textContent = "Sending…";
+        try {
+          var res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data });
+          var json = await res.json();
+          if (json.success) {
+            form.reset();
+            setStatus("ok", "Thank you — your message has been sent. We'll be in touch shortly.");
+          } else {
+            setStatus("err", "Sorry, something went wrong. Please call us or email info@glimpsevision.com.");
+          }
+        } catch (err) {
+          setStatus("err", "Network error. Please try again, or email info@glimpsevision.com.");
+        }
+        btn.disabled = false; btn.textContent = label;
+      });
+    })();
+    </script>
   </div>
 </div></div></section>
 

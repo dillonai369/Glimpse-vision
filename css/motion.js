@@ -160,6 +160,7 @@
 
     // Pinned horizontal brand showcase (side panel is inside the track and scrolls with it)
     var showcase = document.querySelector('.showcase');
+    if (showcase && showcase.classList.contains('showcase--manual')) showcase = null;
     var track = document.querySelector('.showcase-track');
     var pin = document.querySelector('.showcase-pin');
     var counter = document.querySelector('.showcase-counter .num');
