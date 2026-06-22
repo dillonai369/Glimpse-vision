@@ -2516,3 +2516,7 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   .showcase--manual .showcase-pin::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 999px; border: 4px solid #150b06; min-width: 90px; }
   .showcase--manual .showcase-pin::-webkit-scrollbar-thumb:hover { background: #b8923f; }
 }
+
+@media (min-width: 821px) {
+  .spec-grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
