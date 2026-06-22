@@ -2495,20 +2495,18 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
 
 /* ---- TEST: manual horizontal scroll mode for brand showcase (reversible: remove the showcase--manual class to revert) ---- */
 @media (min-width: 821px) {
-  .showcase--manual { height: auto; min-height: 0; }
+  /* keep the section at its original full height so panels are exactly as tall as before */
   .showcase--manual .showcase-pin {
     overflow-x: auto;
     overflow-y: hidden;
-    height: clamp(560px, 80vh, 780px);
     scroll-snap-type: none;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     scrollbar-color: var(--gold) rgba(245,241,234,0.12);
     scrollbar-width: auto;
-    padding-bottom: 10px;
   }
-  .showcase--manual .showcase-track { height: 100%; transform: none !important; }
-  /* larger panels so the photos fill more of the page */
+  .showcase--manual .showcase-track { transform: none !important; }
+  /* wider panels so the photos read large */
   .showcase--manual .showcase-panel { width: clamp(440px, 50vw, 760px); }
   .showcase--manual .showcase-side  { width: clamp(380px, 38vw, 580px); }
   .showcase--manual .showcase-counter { display: none; }
