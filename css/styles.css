@@ -2493,25 +2493,28 @@ section { padding: clamp(60px, 9vw, 130px) 0; }
   }
 }
 
-
 /* ---- TEST: manual horizontal scroll mode for brand showcase (reversible: remove the showcase--manual class to revert) ---- */
 @media (min-width: 821px) {
   .showcase--manual { height: auto; min-height: 0; }
   .showcase--manual .showcase-pin {
     overflow-x: auto;
     overflow-y: hidden;
-    height: clamp(460px, 66vh, 640px);
-    scroll-snap-type: x proximity;
+    height: clamp(560px, 80vh, 780px);
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-    scrollbar-color: var(--gold) rgba(245,241,234,0.10);
-    scrollbar-width: thin;
-    padding-bottom: 6px;
+    scrollbar-color: var(--gold) rgba(245,241,234,0.12);
+    scrollbar-width: auto;
+    padding-bottom: 10px;
   }
   .showcase--manual .showcase-track { height: 100%; transform: none !important; }
-  .showcase--manual .showcase-panel,
-  .showcase--manual .showcase-side { scroll-snap-align: start; }
+  /* larger panels so the photos fill more of the page */
+  .showcase--manual .showcase-panel { width: clamp(440px, 50vw, 760px); }
+  .showcase--manual .showcase-side  { width: clamp(380px, 38vw, 580px); }
   .showcase--manual .showcase-counter { display: none; }
-  .showcase--manual .showcase-pin::-webkit-scrollbar { height: 12px; }
-  .showcase--manual .showcase-pin::-webkit-scrollbar-track { background: rgba(245,241,234,0.10); border-radius: 999px; }
-  .showcase--manual .showcase-pin::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 999px; border: 3px solid #150b06; }
+  /* thicker, more visible scrollbar */
+  .showcase--manual .showcase-pin::-webkit-scrollbar { height: 18px; }
+  .showcase--manual .showcase-pin::-webkit-scrollbar-track { background: rgba(245,241,234,0.12); border-radius: 999px; }
+  .showcase--manual .showcase-pin::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 999px; border: 4px solid #150b06; min-width: 90px; }
+  .showcase--manual .showcase-pin::-webkit-scrollbar-thumb:hover { background: #b8923f; }
 }
