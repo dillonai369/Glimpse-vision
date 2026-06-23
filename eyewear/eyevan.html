@@ -188,7 +188,7 @@
 
 <!-- ====== CINEMATIC HERO — wide 16:9 brand band ====== -->
 <section style="padding: 0; position: relative; background: var(--ink); overflow: hidden;">
-  <div class="brand-hero-band" data-tone="deep" style="position: relative; height: clamp(440px, 64vh, 680px); background-image: url('../images/brands/eyevan-hero.webp'); background-size: cover; background-position: center;">
+  <div class="brand-hero-band" data-tone="deep" style="position: relative; aspect-ratio: 1774 / 887; min-height: 340px; max-height: 90vh; background-image: url('../images/brands/eyevan-hero.webp'); background-size: cover; background-position: center;">
     <!-- Cinematic gradient overlay -->
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,28,26,0.55) 0%, rgba(28,28,26,0.25) 40%, rgba(28,28,26,0.82) 100%);"></div>
     <!-- Flush-left text aligned to header logo -->
@@ -214,7 +214,7 @@
         <p class="lead">Eyevan 7285 is the modern expression of one of Japan&rsquo;s original luxury eyewear houses, founded in Tokyo in 1972. Each frame is made in Sabae &mdash; refined metalwork, hand-finished acetate, and details drawn from the brand&rsquo;s own archive. Quiet, exacting, and unmistakably Japanese.</p>
         <p style="color: var(--ink-soft); margin-top: 16px;"><strong>Best for:</strong> Understated luxury · Japanese craftsmanship · Collectors who notice the details</p>
       </div>
-      <div data-tone="deep" style="background-image: url('../images/brands/eyevan-1.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
+      <div data-tone="deep" style="background-image: url('../images/brands/eyevan-redjacket.webp'); background-color: var(--cream-dk); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
     </div>
   </div>
 </section>
@@ -266,13 +266,12 @@
         <p>The active Eyevan 7285 lineup &mdash; vintage-informed optical and sun, hand-made in Japan. In our cases at both locations.</p>
       </div>
     </div>
-    <div class="brand-gallery" data-count="6">
-      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-2.webp');"></div>
-      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-3.webp');"></div>
-      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-4.webp');"></div>
-      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-5.webp');"></div>
-      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-6.webp');"></div>
-      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-1.webp');"></div>
+    <div class="brand-gallery" data-count="5" style="grid-template-columns: repeat(5, minmax(0, 1fr));">
+      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-table-1.webp');"></div>
+      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-table-2.webp');"></div>
+      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-table-3.webp');"></div>
+      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-table-4.webp');"></div>
+      <div class="brand-gallery-item" data-tone="deep" style="background-image: url('../images/brands/eyevan-table-5.webp');"></div>
     </div>
   </div>
 </section>
@@ -382,6 +381,21 @@
     }
   }
 </style>
+
+<!-- ====== ON THE FACES ====== -->
+<section class="bg-card" style="border-top: 1px solid var(--line); padding: clamp(70px, 9vw, 130px) 0;">
+  <div class="container">
+    <div style="text-align: center; max-width: 56ch; margin: 0 auto 50px;">
+      <span class="eyebrow" style="color: var(--gold);">Eyevan 7285 on the faces</span>
+      <div style="width: 32px; height: 1.5px; background: var(--gold); margin: 14px auto 0;"></div>
+      <h2 style="font-family: var(--display); font-weight: 400; font-style: italic; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink); margin-top: 22px;">On the face.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; max-width: 1100px; margin: 0 auto;">
+      <div style="background-image: url('../images/brands/eyevan-face-1.webp'); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
+      <div style="background-image: url('../images/brands/eyevan-redjacket.webp'); background-size: cover; background-position: center; aspect-ratio: 1/1; border-radius: 18px;"></div>
+    </div>
+  </div>
+</section>
 
 <!-- ====== CTA — both locations ====== -->
 <section class="bg-deep" style="padding: clamp(70px, 9vw, 130px) 0;">
